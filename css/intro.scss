@@ -13,18 +13,13 @@
 .main__container {
     width: 100%;
     background-color: #61c4d9;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     position: relative;
     
 }
 /*background-iamge*/
-.background-image__list {
-    
-    z-index: 2;
-    
-}
+
 .background-image__bar {
     position: absolute;
     top: 55px;
