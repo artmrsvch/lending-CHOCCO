@@ -1,0 +1,127 @@
+@mixin fc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.why-chocco {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    
+}
+.background-image__pattern_list_ch {
+    position: absolute;
+    top: 114px;
+    left: 0;
+    width: 191px;
+    height: 314px;
+    background-image: url(./icons/png/pattern_list_ch.png);
+    background-repeat: no-repeat;
+}
+.background-image__pie {
+    position: absolute;
+    top: 404px;
+    left: 0;
+    width: 161px;
+    height: 315px;
+    z-index: 1;
+    background-image: url(./icons/png/background_pie.png);
+    background-repeat: no-repeat;
+}
+.container__why-chocco {
+    @include fcc;
+    margin-top: 115px;
+}
+.chocco-description {
+    @include fcc;
+    margin-bottom: 60px;
+}
+.chocco-description__headline {
+    font-family: 'alegreya_sansbold';
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+.chocco-description__text {
+    
+    font-family: 'alegreya_sansregular';
+    color: #666666;
+    font-size: 18px;
+    max-width: 55%;
+    text-align: center;
+}
+.about {
+    margin-top: 0px;
+    @include fc;
+}
+.about-list {
+    @include fc;
+    margin: 0;
+    padding: 0;
+}
+.about-item__logo {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #f2f5f4;
+    position: relative;
+  
+    /*&:after {
+        content: "";
+        display: block;
+        background-image: url(./icons/png/swipe.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 45%;
+        right: -104%;
+        width: 67px;
+        height: 21px;}*/
+}
+
+/*LOGO ABOUT*/
+.about-list__item:first-child .about-item__logo {
+    background-image: url(./icons/png/3.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.about-list__item:nth-child(2) .about-item__logo {
+    background-image: url(./icons/png/2.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.about-list__item:last-child .about-item__logo {
+    background-image: url(./icons/png/1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.about-list__item {
+    @include fcc;
+   
+}
+.about-item__headline {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-family: 'alegreya_sansbold';
+    font-size: 27px;
+    text-align: center;
+}
+.about-item__text {
+    max-width: 91%;
+    font-family: 'alegreya_sans_lightregular';
+    font-size: 18px;
+    text-align: center;
+    color: #666666;
+    margin-bottom: 120px;
+    margin-top: 0;
+}
+/*
+*/
