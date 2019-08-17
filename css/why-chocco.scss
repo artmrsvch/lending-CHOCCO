@@ -74,7 +74,7 @@
     background-color: #f2f5f4;
     position: relative;
   
-    /*&:after {
+    &:after {
         content: "";
         display: block;
         background-image: url(./icons/png/swipe.png);
@@ -84,7 +84,13 @@
         top: 45%;
         right: -104%;
         width: 67px;
-        height: 21px;}*/
+        height: 21px;
+    }
+    
+}
+.about-list__item:last-child .about-item__logo:after {
+    content: none;
+
 }
 
 /*LOGO ABOUT*/
