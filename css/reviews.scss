@@ -1,0 +1,125 @@
+.reviews {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: #0f5a47;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 102px;
+        height: 321px;
+        left: 0;
+        bottom: -160px;
+        background: url(./icons/png/list_revi.png) center center no-repeat;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 135px;
+        height: 193px;
+        left: 0;
+        bottom: -85px;
+        background: url(./icons/png/berrys_revi.png) center center no-repeat;
+    }
+}
+.reviews__container {
+    @include fcc;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 86px;
+        top: 36px;
+        right: -55px;
+        background: url(./icons/png/strawberry_revi.png) center center no-repeat;
+    }
+}
+.reviews__title {
+    @include title;
+    margin: 0;
+    padding-top: 69px;
+    margin-bottom: 44px; 
+}
+.reviews__content {
+    margin:0 auto;
+}
+.reviews-block__description{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    background: #f8faf9;
+    height: 345px;
+    width: 100%;
+    margin-bottom: 21px;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: 0;
+        height: 25px;
+        width: 90px;
+        background: url(./icons/png/label_reviews.png) center center no-repeat;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 127px;
+        height: 167px;
+        background: url(./icons/png/reviews_berry.png) center center no-repeat;
+    }
+}
+.reviews-description__avatar{
+    min-width: 254px;
+    min-height: 260px;
+    margin-left: 46px;
+    margin-right: 20px;
+    background: url(./icons/png/reviews_av.png) center center / contain no-repeat;
+}
+.reviews-description__comment{
+    width: 47%;
+}
+.comment__title h3{
+    font-family: 'alegreya_sans_mediumregular';
+    color: #323232;
+    font-size: 30px;
+    margin: 0;
+}
+.comment__text {
+    @include regular-grey;
+    margin-top: 25px;
+    margin-bottom: 27px;
+}
+.comment__author {
+    @include regular-grey;
+    font-family: 'alegreya_sans_mediumregular';
+    font-style: normal;
+    
+}
+                    /* BLOCK USERS */
+.reviews-block__users {
+    @include fc;
+    margin-bottom: 61px;
+}
+.users__list{
+    @include fsbc;
+}
+.users__item {
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    
+    margin-right: 5px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.users__item_active {
+    border: 6px solid #0f5a47;
+}

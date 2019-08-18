@@ -1,0 +1,27 @@
+@mixin title {
+    font-family: 'alegreya_sansbold';
+    font-size: 48px;
+    text-transform: uppercase;
+    text-align: center;
+}
+@mixin fc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin fcc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+@mixin fsbc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+@mixin regular-grey {
+    color: #666666;
+    font-family: 'alegreya_sansregular';
+    font-size: 18px;
+}

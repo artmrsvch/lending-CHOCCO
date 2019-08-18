@@ -117,7 +117,8 @@
                         <li class="about-list__item">
                             <div class="about-item__logo"></div>
                             <div class="about-item__headline">
-                                <h3>Питательно</h3></div>
+                                <h3>Питательно</h3>
+                            </div>
                             <div class="about-item__text">
                                 <p>Высокое содержание качественного белка, а также всех необходимых витаминов и минералов.</p>
                             </div>
@@ -127,16 +128,36 @@
             </div> <!--container-->
     </section>
     <section class="reviews">
-            <div class="container">
-                <h2 class="reviews__headline">отзывы</h2>
-                <div class="reviews__block">
-                    <div class="reviews-block__description">
-                        <div class="reviews-description__avatar"></div>
-                        <div class="reviews-description__comment"></div>
+        <div class="container reviews__container">
+            <h2 class="reviews__title">отзывы</h2>
+            <div class="reviews__content">
+                <div class="reviews-block__description">
+                    <div class="reviews-description__avatar">
                     </div>
-                    <div class="reviews-block__users"></div>
+                    <div class="reviews-description__comment">
+                        <div class="comment__title">
+                            <h3>Лучший перекус</h3>
+                        </div>
+                        <div class="comment__text">
+                            <p>Я ем малыми порциями, но часто. Это повышает мою продуктивность в разы. В течение дня сижу за компьютером 
+                                    и часто отходить в кафе или на кухню просто не могу себе позволить. А батончик – он всегда под рукой. Это приятно 
+                                    и удобно. </p>
+                        </div>
+                        <address class="comment__author">Алёна Хмельницкая</address>
+                    </div>
                 </div>
-            </div>
+                <div class="reviews-block__users">
+                    <ul class="users__list">
+                        <li class="users__item users__item_active" style="background: url(./icons/png/item_reviews-pic_1.png) center center no-repeat">
+                        </li>
+                        <li class="users__item" style="background: url(./icons/png/item_reviews-pic2.png) center center no-repeat">
+                        </li>
+                        <li class="users__item" style="background: url(./icons/png/item_reviews-pic3.png) center center no-repeat">
+                        </li>
+                    </ul>
+                </div>
+            </div> <!--reviews__block-->
+        </div> <!--container-->
     </section>
 </body>
 </html>
