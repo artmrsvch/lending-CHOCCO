@@ -1,0 +1,9 @@
+.fixed-menu {
+  position: fixed;
+  top: 33%;
+  right: 46px; }
+
+.fixed-menu__item {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ffffff; }
