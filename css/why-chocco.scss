@@ -11,33 +11,32 @@
 }
 .why-chocco {
     position: relative;
-    width: 100%;
-    max-width: 1100px;
-    margin: 0 auto;
-    
+    height: 100vh;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -125px;
+        left: 0;
+        width: 161px;
+        height: 315px;
+        background-image: url(./icons/png/background_pie.png);
+        background-repeat: no-repeat;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 114px;
+        left: 0;
+        width: 191px;
+        height: 314px;
+        background-image: url(./icons/png/pattern_list_ch.png);
+        background-repeat: no-repeat;
+    }
 }
-.background-image__pattern_list_ch {
-    position: absolute;
-    top: 114px;
-    left: 0;
-    width: 191px;
-    height: 314px;
-    background-image: url(./icons/png/pattern_list_ch.png);
-    background-repeat: no-repeat;
-}
-.background-image__pie {
-    position: absolute;
-    top: 404px;
-    left: 0;
-    width: 161px;
-    height: 315px;
-    z-index: 1;
-    background-image: url(./icons/png/background_pie.png);
-    background-repeat: no-repeat;
-}
+   
 .container__why-chocco {
     @include fcc;
-    margin-top: 115px;
 }
 .chocco-description {
     @include fcc;
@@ -48,7 +47,10 @@
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
+    padding-top: 115px;
     margin: 0;
+    margin-bottom: 10px;
+
 }
 .chocco-description__text {
     
@@ -113,14 +115,14 @@
     @include fcc;
    
 }
-.about-item__headline {
+.about-item__headline h3{
     margin-top: 40px;
     margin-bottom: 20px;
     font-family: 'alegreya_sansbold';
     font-size: 27px;
     text-align: center;
 }
-.about-item__text {
+.about-item__text p {
     max-width: 91%;
     font-family: 'alegreya_sans_lightregular';
     font-size: 18px;
