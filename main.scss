@@ -1,14 +1,17 @@
 
+//Normalize
+@import "./css/Normalize.scss";
+
+
+//Settings
+@import "./css/layout.scss";
+@import "./css/font.scss";
 @import "./css/mixin.scss";
 
 
-
-
-@import "./css/Normalize.scss";
-@import "./css/layout.scss";
-@import "./css/font.scss";
+//Scripts
 @import "./css/intro.scss";
 @import "./css/why-chocco.scss";
 @import "./css/reviews.scss";
 @import "./css/fixed-menu.scss";
-
+@import "./css/team.scss";

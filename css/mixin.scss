@@ -1,3 +1,49 @@
+//FONTS
+@mixin black-reg{
+    font-family: 'alegreya_sans_blackregular';
+}
+@mixin black-i{
+    font-family: 'alegreya_sans_blackitalic';
+}
+@mixin bold{
+    font-family: 'alegreya_sansbold';
+}
+@mixin bold-i{
+    font-family: 'alegreya_sansbold_italic';
+}
+@mixin exb-reg{
+    font-family: 'alegreya_sans_extraboldRg';
+}
+@mixin exb-i{
+    font-family: 'alegreya_sans_extrabolditalic';
+}
+@mixin i{
+    font-family: 'alegreya_sansitalic';
+}
+@mixin li-reg{
+    font-family: 'alegreya_sans_lightregular';
+}
+@mixin li-i{
+    font-family: 'alegreya_sans_lightitalic';
+}
+@mixin me-reg{
+    font-family: 'alegreya_sans_mediumregular';
+}
+@mixin me-i{
+    font-family: 'alegreya_sans_mediumitalic';
+}
+@mixin reg{
+    font-family: 'alegreya_sansregular';
+}
+
+
+
+//MIXINS
+@mixin section {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
 @mixin title {
     font-family: 'alegreya_sansbold';
     font-size: 48px;

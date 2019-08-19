@@ -1,6 +1,5 @@
 .why-chocco {
-    position: relative;
-    height: 100vh;
+    @include section;
 
     &::after {
         content: '';

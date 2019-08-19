@@ -1,8 +1,6 @@
 
 .intro {
-    width: 100%;
-    height: 100vh;
-    position: relative;
+    @include section;
     background-color: #61c4d9;
     background-image: url(./icons/png/background_list.png);
     background-repeat: no-repeat;
