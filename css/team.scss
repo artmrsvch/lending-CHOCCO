@@ -1,5 +1,4 @@
 .team {
-    @include section;
     background: url(./icons/png/team_back_list.png) top right no-repeat;
 
     &::after {
@@ -17,6 +16,7 @@
         position: absolute;
         width: 104px;
         height: 114px;
+        z-index: 1;
         left: 30px;
         bottom: -44px;
         background: url(./icons/png/team_back_raspberry.png) center center no-repeat;
@@ -52,15 +52,15 @@
         margin-right: 0;
     }
 }
-.team__user-pic {
+.team-list-pic {
     width: 219px;
     height: 288px;
     margin-bottom: 26px;
 }
-.team__user-content {
+.team-list-content {
     @include fcc;
 }
-.team__user-name {
+.team-list-name {
     @include me-reg;
     font-size: 21px;
     &::after {
@@ -75,22 +75,22 @@
     }
     
 }
-.team__user-position {
+.team-list-position {
     @include reg;
     font-size: 18px;
     margin-top: 17px;
     margin-bottom: 12px;
 }
 
-.team__user-duties {
+.team-list-duties {
     @include regular-grey;
     text-align: center;
 }
-.team__user-hover {
+.team-list-hover {
     display: flex;
     align-items: center;
 }
-.team__user-info {
+.team-list-info {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -101,10 +101,10 @@
 
             /*ACTIVE MODIFICATION*/
 
-.team__user_activ .team__user-info{
+.team-list_activ .team-list-info{
     height: auto;
 }
-.team__user_activ .team__user-name::after{
+.team-list_activ .team-list-name::after{
     border-top: none;
     border-bottom: 9px solid #0f5a47;
 }

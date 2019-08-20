@@ -1,6 +1,4 @@
 .why-chocco {
-    @include section;
-
     &::after {
         content: '';
         position: absolute;
@@ -39,7 +37,7 @@
 }
 .chocco-description__text {
     
-    font-family: 'alegreya_sansregular';
+    @include reg;
     color: #666666;
     font-size: 18px;
     max-width: 55%;
@@ -56,7 +54,7 @@
     margin: 0;
     padding: 0;
 }
-.about-item__logo {
+.about-list__logo {
     width: 125px;
     height: 125px;
     border-radius: 50%;
@@ -77,23 +75,23 @@
     }
     
 }
-.about-list__item:last-child .about-item__logo:after {
+.about-list__item:last-child .about-list__logo:after {
     content: none;
 
 }
 
 /*LOGO ABOUT*/
-.about-list__item:first-child .about-item__logo {
+.about-list__item:first-child .about-list__logo {
     background-image: url(./icons/png/3.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
-.about-list__item:nth-child(2) .about-item__logo {
+.about-list__item:nth-child(2) .about-list__logo {
     background-image: url(./icons/png/2.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
-.about-list__item:last-child .about-item__logo {
+.about-list__item:last-child .about-list__logo {
     background-image: url(./icons/png/1.png);
     background-repeat: no-repeat;
     background-position: center center;
@@ -102,16 +100,16 @@
     @include fcc;
    
 }
-.about-item__headline h3{
+.about-list__item h3{
     margin-top: 40px;
     margin-bottom: 20px;
-    font-family: 'alegreya_sansbold';
+    @include bold;
     font-size: 27px;
     text-align: center;
 }
-.about-item__text p {
+.about-list__item p {
     max-width: 91%;
-    font-family: 'alegreya_sans_lightregular';
+    @include li-reg;
     font-size: 18px;
     text-align: center;
     color: #666666;

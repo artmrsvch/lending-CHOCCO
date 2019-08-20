@@ -1,6 +1,4 @@
-
 .intro {
-    @include section;
     background-color: #61c4d9;
     background-image: url(./icons/png/background_list.png);
     background-repeat: no-repeat;
@@ -25,16 +23,6 @@
         background-image: url(./icons/png/background_blackberry.png);
         background-repeat: no-repeat;
     }
-}
-
-
-.container {
-    margin: 0 auto;
-    width: 100%;
-    height: 100%;
-    max-width: 940px;
-    padding: 0 10px;
-   
 }
 .intro__container {
     display: flex;
@@ -84,8 +72,8 @@
     }
 }
 
-.menu__link {
-    font-family: "alegreya_sansregular";
+.menu-list__link {
+    @include reg;
     text-decoration: none;
     color: #fff;
     font-size: 18px;
@@ -105,7 +93,7 @@
     text-transform: uppercase;
     color: white;
     font-size: 24px;
-    font-family: "alegreya_sansregular";
+    @include reg;
     
     &:before {
         content: '';
@@ -132,6 +120,7 @@
 .intro__content-main {
     display: flex;
     flex-direction: column;
+    margin-right: 77px;
 
     
 }
@@ -141,13 +130,13 @@
 .title-bar {
     margin-top: 0;
     font-size: 60px;
-    font-family: 'alegreya_sansbold';
+    @include bold;
     color: #fff;
     text-transform: uppercase;
     line-height: 1;
 }
 .subtitle-bar {
-    font-family: "alegreya_sansregular";
+    @include reg;
     color: white;
     font-size: 21px;
     line-height: 1.4;
@@ -161,7 +150,7 @@
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    font-family: 'alegreya_sans_extraboldRg';
+    @include exb-reg;
     border-radius: 40px;
     width: 156px;
     height: 58px;
@@ -176,10 +165,6 @@
     background: #0f5a47;
     color: #fff;
 }
-.pictures__bar {
-    margin-left: 77px;
-}
-
 
                 /*INTRO SUB-CONTENT*/
 .sub-content {
@@ -188,40 +173,39 @@
     margin-top: -50px;
 }
 /*INTRO FEATURES*/
-.intro__features{
+.sub-content__features{
     min-width: 470px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 .features-list {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding-bottom: 14px;
 }
-.features-block {
+.features-list__item {
     display: flex;
 
 }
-.features-block__icon {
+.features-list__icon {
     
     width: 50px;
     height: 50px;
     
 }
-.features-block__text {
+.features-list__text {
     display: inline-block;
     vertical-align: top;
     margin-right: 45px;
-    font-family: "alegreya_sansregular";
+    @include reg;
     color: white;
     font-size: 16px;
 }
-.features-block:last-child .features-block__text{
+.features-list__item:last-child .features-list__text{
     margin: 0;
 }
     
 /* icons intro*/
-.features-block__icon-product {
+.features-list__icon-product {
     display: inline-block;
     width: 44px;
     height: 41px;
@@ -229,14 +213,14 @@
     margin-right: 8px;
     
 }
-.features-block__icon-delivery {
+.features-list__icon-delivery {
     display: inline-block;
     width: 50px;
     height: 40px;
     background: url(./icons/png/5.png) center center no-repeat;
     margin-right: 12px;
 }
-.features-block__icon-figure {
+.features-list__icon-figure {
     display: inline-block;
     min-width: 42px;
     height: 42px;
@@ -246,21 +230,25 @@
 /* picture block */
 .picture-content {
     display: flex;
-    justify-content: flex-end;
-    min-height: 255px;
-    margin-top: -175px;
-    margin-left: 75px; 
+    width: 49%;
+    position: relative;
 }
-.piture__style {
-     display: block;
-}
-.picture-block__berry {
-     display: flex;
-     align-items: center;
-     justify-content: flex-start;
-}
-.picture-block__list {
-     display: flex;
-     align-items: flex-start;
-     justify-content: flex-end;
+
+.picture-content__images{
+     position: absolute;
+     top: -129px;
+     left: 64px;
+     width: 220px;
+     height: 208px;
+     background: url("./icons/png/background__raspberries.png")center center no-repeat;
+     &:after {
+         content: '';
+         display: block;
+        position: absolute;
+        bottom: 53px;
+        right: -236px;
+        width: 236px;
+        height: 203px; 
+        background: url("./icons/png/background_list_first.png")center center no-repeat;
+     }
 }

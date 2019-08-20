@@ -43,10 +43,8 @@
 .reviews__content {
     margin:0 auto;
 }
-.reviews-block__description{
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+.reviews-list{
+    @include ffsc;
     background: #f8faf9;
     height: 345px;
     width: 100%;
@@ -72,42 +70,44 @@
         background: url(./icons/png/reviews_berry.png) center center no-repeat;
     }
 }
-.reviews-description__avatar{
+.reviews-list__item {
+    @include ffsc;
+}
+.reviews-list__avatar{
     min-width: 254px;
     min-height: 260px;
     margin-left: 46px;
     margin-right: 20px;
-    background: url(./icons/png/reviews_av.png) center center / contain no-repeat;
 }
-.reviews-description__comment{
+.reviews-list__comment{
     width: 47%;
 }
-.comment__title h3{
-    font-family: 'alegreya_sans_mediumregular';
+.reviews-list__comment h3{
+    @include me-reg;
     color: #323232;
     font-size: 30px;
     margin: 0;
 }
-.comment__text {
+.reviews-list__comment p {
     @include regular-grey;
     margin-top: 25px;
     margin-bottom: 27px;
 }
-.comment__author {
+.reviews-list__author {
     @include regular-grey;
-    font-family: 'alegreya_sans_mediumregular';
+    @include me-reg;
     font-style: normal;
     
 }
                     /* BLOCK USERS */
-.reviews-block__users {
+.reviews-commentators {
     @include fc;
-    margin-bottom: 61px;
+    padding-bottom: 61px;
 }
-.users__list{
+.reviews-commentators__list{
     @include fsbc;
 }
-.users__item {
+.reviews-commentators__item {
     width: 66px;
     height: 66px;
     border-radius: 50%;
@@ -117,6 +117,6 @@
         margin-right: 0;
     }
 }
-.users__item_active {
+.reviews-commentators__item_active {
     border: 6px solid #0f5a47;
 }
