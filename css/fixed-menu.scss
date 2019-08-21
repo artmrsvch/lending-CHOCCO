@@ -8,7 +8,7 @@ right: 46px;
 .fixed_btn {
     width: 16px;
     height: 16px;
-    background: transparent;
+
     border: 1px solid transparent;
     border-radius: 50%;
     margin-bottom: 16px;
@@ -27,11 +27,10 @@ right: 46px;
         height: 6px;
         border-radius: 50%;
         background: #ffffff;
-        cursor: pointer;
+
     }
     &:focus {
         border: 1px solid #ffffff;
-        outline: 0;
     }
 }
 /*.fixed-menu__item {

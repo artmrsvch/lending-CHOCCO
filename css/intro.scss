@@ -142,28 +142,30 @@
     line-height: 1.4;
     font-weight: 500;
     margin-top: 15px;
+    margin-bottom: 35px;
 
 }
     /*BUTTON*/
-.button__link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
+
+
+.btn {
+    border: none;
     @include exb-reg;
     border-radius: 40px;
+    padding: 22px 33px;
     width: 156px;
     height: 58px;
     text-transform: uppercase;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-}
-.button__link_white {
-    background: #fff;
-    color: #0f5a47;
-}
-.button__link_green {
-    background: #0f5a47;
-    color: #fff;
+
+    &_green {
+        background: $green;
+        color: #fff;
+    }
+    &_white {
+        background: #fff;
+        color: $green;
+    }
 }
 
                 /*INTRO SUB-CONTENT*/

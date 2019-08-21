@@ -50,10 +50,10 @@
                         <div class="intro__description">
                             <h1 class="title-bar">натуральные<br> шоколадные<br> батончики</h1>
                             <h3 class="subtitle-bar">Наши батончики идеально подходят для<br> тех, кто следит за своим здоровье</h3>
-                            <div class="button">
-                                <a href="#" class="button__link button__link_white">
-                                    <span class="button__text">заказать</span>
-                                </a> 
+                            <div class="button-block">
+                                <button type="button" class="btn btn_white">
+                                заказать
+                                </button>
                             </div> <!-- button -->
                         </div> <!-- intro__description -->
                     </div> <!-- intro__content-main -->
@@ -262,6 +262,82 @@
                         </div>
                     </li>
                 </ul>
+            </div>
+        </section>
+        <section class="section delivery delivery-style">
+            <div class="container form-container">
+                <h2 class="form-title">закажи доставку</h2>
+                <form action="" class="form-element">
+                    <div class="form-block">
+                        <div class="form-coloumn">
+                            <label class="form-item">
+                                <div class="form-item__text">Имя</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                            <label class="form-item">
+                                <div class="form-item__text">Телефон</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                        </div>
+                        <div class="form-coloumn">
+                            <label class="form-item">
+                                <div class="form-item__text">Улица</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                        </div>
+                        <div class="form-coloumn">
+                            <label class="form-item">
+                                <div class="form-item__text">Дом</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                            <label class="form-item">
+                                <div class="form-item__text">Корпус</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                            <label class="form-item">
+                                <div class="form-item__text">Квартира</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                            <label class="form-item">
+                                <div class="form-item__text">Этаж</div>
+                                <input type="text" class="form-name__input">
+                            </label>
+                        </div>
+                    </div>
+                    <div class="form-block">
+                        <label class="textarea-item">
+                            <div class="form-item__text">Комментарий</div>
+                            <textarea class="form-textarea"></textarea>
+                        </label>   
+                        <div class="radiobuttons">
+                            <label class="radio-label">
+                                <input type="radio" name="rbt" class="form-radiobutton">
+                                <span class="radio-style"></span>
+                                <span class="radio-text">Потребуется сдача</span>
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="rbt" class="form-radiobutton">
+                                <span class="radio-style"></span>
+                                <span class="radio-text">Оплата по карте</span>
+                            </label>
+                        </div>
+                        <div class="checkbox">
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="form-checkbox">
+                                <span class="checkbox-style"></span>
+                                <span class="radio-text">Не перезванивать</span>
+                            </label>
+                        </div>
+                        <div class="button-block">
+                            <button type="submit" class="btn btn_green">
+                                заказать
+                            </button>
+                            <button type="reset" class="btn__reset">
+                                Очистить
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </section>
         <ul class="fixed-menu">
