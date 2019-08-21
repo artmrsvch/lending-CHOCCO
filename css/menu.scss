@@ -1,5 +1,98 @@
 .menu {
-    background: url(./icons/png/menu_backgorund.png)no-repeat;
+    background: url(./icons/png/menu_backgorund.png) #000 no-repeat;
     background-size: cover;
 
+}
+.bar-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+}
+
+                    /*SLIDE*/
+
+
+.bar-menu__slide {
+    height: 100%;
+    width: 100px;
+    @include fc;
+    background: #000;
+
+    
+}
+.bar-menu__slide_barmilk {
+    background-image: url(./icons/png/menu_back_batmilk.png);
+}
+.bar-menu__slide_honey {
+    background-image: url(./icons/png/menu_back_honey.png);
+}
+.bar-menu__slide_berry {
+    background-image: url(./icons/png/menu_back_berry.png);
+}
+
+
+.bar-menu__item {
+    display: flex;
+    align-items: center;
+}
+
+.bar-menu__hover{
+    display: flex;
+    position: relative;
+    height: 100%;
+    width: 0;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #2f3234;
+        opacity: 0.93;
+        z-index: 0;
+    }
+   
+}
+.bar-menu__hover_active {
+    width: auto;
+}
+.bar-menu__slide h3 {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg); 
+    @include me-reg;
+    color: #fff;
+    font-size: 48px;
+    font-weight: 500;
+}
+.bar-menu__hover p {
+    width: 370px;
+    @include reg;
+    color: #fff;
+    line-height: 24px;
+    font-size: 16px;
+    text-align: start;
+    padding: 50px 30px;
+    z-index: 1;
+}
+
+.close-slide {
+    position: absolute;
+    z-index: 2;
+    top: 26px;
+    right: 32px;
+    
+}
+.close-slide__btn {
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: url(./icons/png/menu_exit.png) center center;
+    cursor: pointer;
+    outline: 0;
 }
