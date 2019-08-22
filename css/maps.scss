@@ -1,0 +1,53 @@
+.maps {
+    width: 100%;
+    height: 100%;
+    background-image: url(./icons/png/background_maps.png);
+    background-size:  cover;
+}
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    
+}
+.footer__container{
+    display: flex;
+
+}
+.footer__info {
+    @include fcc;
+    align-items: flex-start;
+    @include reg;
+    
+    font-size: 21px;
+    height: 93px;
+}
+.address {
+    font-style: normal;
+}
+.phone-number {
+    color: $green;
+
+    &::before {
+        content: '';
+        display: inline-block;
+        margin-right: 7px;
+        width: 12px;
+        height: 11px;
+        background: url(./icons/png/footer_phone.jpg);
+
+    }
+}
+.footer__social {
+    display: flex;
+    justify-content: flex-end;
+
+}
+.footer__info {
+    margin-left: 20px;
+    &:last-child {
+        margin-left: 0;
+    }
+}
