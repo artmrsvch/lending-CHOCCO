@@ -13,7 +13,7 @@
     
 }
 .footer__container{
-    display: flex;
+    @include fsbc;
     height: auto;
 
 }
@@ -55,10 +55,26 @@
 .footer__item {
     margin-right: 10px;
 }
-.footer__item_vk {
-
-}
 .icon-sprite {
-    width: 30px;
-    height: 30px;
+    color: #b2b2b2;
+    transition: 0.2s;
+    &:hover {
+        color: #000;
+    }
+}
+.icon-sprite_vk {
+    width: 23px;
+    height: 13px;
+}
+.icon-sprite_fb {
+    width: 20px;
+    height: 20px;
+}
+.icon-sprite_in {
+    width: 20px;
+    height: 20px;
+}
+.icon-sprite_tw {
+    width: 20px;
+    height: 16px;
 }
