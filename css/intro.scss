@@ -56,6 +56,9 @@
     color: #fff;
     
 }
+.header__burger {
+    @include fsbc;
+}
 .menu-list {
     list-style: none;
     @include fsbc;
@@ -68,7 +71,7 @@
     
 
     &:last-child {
-        margin: 0;
+        margin-right: 45px;
     }
 }
 
