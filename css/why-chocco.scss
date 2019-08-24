@@ -46,7 +46,8 @@
 .about {
     margin-top: 0px;
     @include fc;
-    width: 100%
+    width: 100%;
+    padding-bottom: 120px;
 }
 .about-list {
     @include fc;
@@ -55,6 +56,7 @@
     padding: 0;
 }
 .about-list__logo {
+    @include fc;
     width: 125px;
     height: 125px;
     border-radius: 50%;
@@ -81,40 +83,39 @@
 }
 
 /*LOGO ABOUT*/
-.about-list__item:first-child .about-list__logo {
-    background-image: url(./icons/png/3.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+
+.about-list__useful {
+    @include svg;
+    width: 66px;
+    height: 69px;
 }
-.about-list__item:nth-child(2) .about-list__logo {
-    background-image: url(./icons/png/2.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+.about-list__yum {
+    @include svg;
+    width: 70px;
+    height: 69px;
 }
-.about-list__item:last-child .about-list__logo {
-    background-image: url(./icons/png/1.png);
-    background-repeat: no-repeat;
-    background-position: center center;
+.about-list__nutri {
+    @include svg;
+    width: 75px;
+    height: 64px;
 }
+
 .about-list__item {
     @include fcc;
    
 }
-.about-list__item h3{
+.about-list__text h3{
     margin-top: 40px;
     margin-bottom: 20px;
     @include bold;
     font-size: 27px;
     text-align: center;
 }
-.about-list__item p {
+.about-list__text p {
     max-width: 91%;
     @include li-reg;
     font-size: 18px;
     text-align: center;
     color: #666666;
-    margin-bottom: 120px;
     margin-top: 0;
 }
-/*
-*/

@@ -1,5 +1,6 @@
 .reviews {
     @include section;
+    padding-bottom: 61px;
 
     &::before {
         content: '';
@@ -72,6 +73,10 @@
 }
 .reviews-list__item {
     @include ffsc;
+    display: none;
+}
+.reviews-list_active {
+    display: flex;
 }
 .reviews-list__avatar{
     min-width: 254px;
@@ -102,7 +107,6 @@
                     /* BLOCK USERS */
 .reviews-commentators {
     @include fc;
-    padding-bottom: 61px;
 }
 .reviews-commentators__list{
     @include fsbc;
@@ -110,13 +114,18 @@
 .reviews-commentators__item {
     width: 66px;
     height: 66px;
+    @include fc;
     border-radius: 50%;
+
     
     margin-right: 5px;
     &:last-child {
         margin-right: 0;
     }
 }
-.reviews-commentators__item_active {
+.reviews-commentators__pic {
+    display: inline-block;
+}
+.reviews-commentators_active {
     border: 6px solid #0f5a47;
 }

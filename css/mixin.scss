@@ -1,63 +1,39 @@
 //FONTS
 @mixin black-reg{
     font-family: 'alegreya_sans_blackregular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin black-i{
     font-family: 'alegreya_sans_blackitalic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin bold{
     font-family: 'alegreya_sansbold';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin bold-i{
     font-family: 'alegreya_sansbold_italic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin exb-reg{
     font-family: 'alegreya_sans_extraboldRg';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin exb-i{
     font-family: 'alegreya_sans_extrabolditalic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin i{
     font-family: 'alegreya_sansitalic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin li-reg{
     font-family: 'alegreya_sans_lightregular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin li-i{
     font-family: 'alegreya_sans_lightitalic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin me-reg{
     font-family: 'alegreya_sans_mediumregular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin me-i{
     font-family: 'alegreya_sans_mediumitalic';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 @mixin reg{
     font-family: 'alegreya_sansregular';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 
@@ -99,4 +75,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+}
+@mixin svg {
+    fill:none;
+    stroke:#000000;
+    stroke-width:0.75;
+    stroke-miterlimit:10;
 }
