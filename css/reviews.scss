@@ -1,0 +1,131 @@
+.reviews {
+    @include section;
+    padding-bottom: 61px;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 102px;
+        height: 321px;
+        left: 0;
+        bottom: -160px;
+        background: url(./icons/png/list_revi.png) center center no-repeat;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        width: 135px;
+        height: 193px;
+        left: 0;
+        bottom: -85px;
+        background: url(./icons/png/berrys_revi.png) center center no-repeat;
+    }
+}
+.reviews__container {
+    @include fcc;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        width: 150px;
+        height: 86px;
+        top: 36px;
+        right: -55px;
+        background: url(./icons/png/strawberry_revi.png) center center no-repeat;
+    }
+}
+.reviews__title {
+    @include title;
+    margin: 0;
+    padding-top: 69px;
+    margin-bottom: 44px; 
+}
+.reviews__content {
+    margin:0 auto;
+}
+.reviews-list{
+    @include ffsc;
+    background: #f8faf9;
+    height: 345px;
+    width: 100%;
+    margin-bottom: 21px;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        left: 45%;
+        top: 0;
+        height: 25px;
+        width: 90px;
+        background: url(./icons/png/label_reviews.png) center center no-repeat;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 127px;
+        height: 167px;
+        background: url(./icons/png/reviews_berry.png) center center no-repeat;
+    }
+}
+.reviews-list__item {
+    @include ffsc;
+    display: none;
+}
+.reviews-list_active {
+    display: flex;
+}
+.reviews-list__avatar{
+    min-width: 254px;
+    min-height: 260px;
+    margin-left: 46px;
+    margin-right: 20px;
+}
+.reviews-list__comment{
+    width: 47%;
+}
+.reviews-list__comment h3{
+    @include me-reg;
+    color: #323232;
+    font-size: 30px;
+    margin: 0;
+}
+.reviews-list__comment p {
+    @include regular-grey;
+    margin-top: 25px;
+    margin-bottom: 27px;
+}
+.reviews-list__author {
+    @include regular-grey;
+    @include me-reg;
+    font-style: normal;
+    
+}
+                    /* BLOCK USERS */
+.reviews-commentators {
+    @include fc;
+}
+.reviews-commentators__list{
+    @include fsbc;
+}
+.reviews-commentators__item {
+    width: 66px;
+    height: 66px;
+    @include fc;
+    border-radius: 50%;
+
+    
+    margin-right: 5px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.reviews-commentators__pic {
+    display: inline-block;
+}
+.reviews-commentators_active {
+    border: 6px solid #0f5a47;
+}

@@ -1,0 +1,42 @@
+.fixed-menu{
+position: fixed;
+top: 33%;
+right: 46px;
+}
+
+
+.fixed_btn {
+    width: 16px;
+    height: 16px;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+    margin-bottom: 16px;
+    position: relative;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: #ffffff;
+
+    }
+    &:focus {
+        border: 1px solid #ffffff;
+    }
+}
+/*.fixed-menu__item {
+    &_active {
+        .fixed_btn {
+            border-color: #ffffff;
+        }
+    }
+}*/

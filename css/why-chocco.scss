@@ -1,0 +1,121 @@
+.why-chocco {
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -111px;
+        left: 0;
+        width: 161px;
+        height: 315px;
+        background-image: url(./icons/png/background_pie.png);
+        background-repeat: no-repeat;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        top: 30%;
+        left: 0;
+        width: 191px;
+        height: 314px;
+        background-image: url(./icons/png/pattern_list_ch.png);
+        background-repeat: no-repeat;
+    }
+}
+   
+.container__why-chocco {
+    @include fcc;
+}
+.chocco-description {
+    @include fcc;
+    margin-bottom: 60px;
+}
+.chocco-description__headline {
+    @include title;
+    padding-top: 115px;
+    margin: 0;
+    margin-bottom: 10px;
+
+}
+.chocco-description__text {
+    
+    @include reg;
+    color: #666666;
+    font-size: 18px;
+    max-width: 55%;
+    text-align: center;
+}
+.about {
+    margin-top: 0px;
+    @include fc;
+    width: 100%;
+    padding-bottom: 120px;
+}
+.about-list {
+    @include fc;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.about-list__logo {
+    @include fc;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background-color: #f2f5f4;
+    position: relative;
+  
+    &:after {
+        content: "";
+        display: block;
+        background-image: url(./icons/png/swipe.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: 45%;
+        right: -104%;
+        width: 67px;
+        height: 21px;
+    }
+    
+}
+.about-list__item:last-child .about-list__logo:after {
+    content: none;
+
+}
+
+/*LOGO ABOUT*/
+
+.about-list__useful {
+    @include svg;
+    width: 66px;
+    height: 69px;
+}
+.about-list__yum {
+    @include svg;
+    width: 70px;
+    height: 69px;
+}
+.about-list__nutri {
+    @include svg;
+    width: 75px;
+    height: 64px;
+}
+
+.about-list__item {
+    @include fcc;
+   
+}
+.about-list__text h3{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    @include bold;
+    font-size: 27px;
+    text-align: center;
+}
+.about-list__text p {
+    max-width: 91%;
+    @include li-reg;
+    font-size: 18px;
+    text-align: center;
+    color: #666666;
+    margin-top: 0;
+}
