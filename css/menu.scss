@@ -1,6 +1,17 @@
 .menu {
     background: url(./icons/png/menu_backgorund.png) #000 no-repeat;
     background-size: cover;
+    &::after{
+    content: '';
+        position: absolute;
+        width: rem(104px);
+        height: rem(114px);
+        z-index: 1;
+        left: rem(33px);
+        top: rem(-70px);
+        background: url(./icons/png/team_back_raspberry.png) center center / cover no-repeat;
+
+    }
 
 }
 .bar-menu {
