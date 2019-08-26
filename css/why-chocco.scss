@@ -2,67 +2,144 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: -111px;
+        bottom: rem(-111px);
         left: 0;
-        width: 161px;
-        height: 315px;
+        width: rem(161px);
+        height: rem(315px);
         background-image: url(./icons/png/background_pie.png);
         background-repeat: no-repeat;
+
+        @include tablets {
+            bottom: rem(-74px);
+        }
+        @include phones {
+            content: none;
+        }
     }
     &::before {
         content: '';
         position: absolute;
         top: 30%;
         left: 0;
-        width: 191px;
-        height: 314px;
+        width: rem(191px);
+        height: rem(314px);
         background-image: url(./icons/png/pattern_list_ch.png);
         background-repeat: no-repeat;
+
+        @include tablets {
+            top: 17.5%;
+        }
+        @include phones {
+            content: none;
+        }
     }
 }
    
 .container__why-chocco {
     @include fcc;
+    @include tablets {
+        padding-top: rem(60px);
+        padding-bottom: rem(52px);
+    }
+    @include phones {
+        padding-top: rem(55px);
+        
+    }
 }
 .chocco-description {
     @include fcc;
-    margin-bottom: 60px;
+    margin-bottom: rem(60px);
+
+    @include tablets {
+        margin-bottom: rem(30px);
+    }
 }
-.chocco-description__headline {
+.chocco-description__title {
     @include title;
-    padding-top: 115px;
+    padding-top: rem(115px);
     margin: 0;
-    margin-bottom: 10px;
+    margin-bottom: rem(10px);
+
+    @include tablets {
+        padding-top: 0;
+    }
 
 }
-.chocco-description__text {
-    
+.chocco-description__subtitle {
     @include reg;
     color: #666666;
-    font-size: 18px;
+    font-size: rem(18px);
     max-width: 55%;
     text-align: center;
+
+    @include phones {
+        max-width: 85%;
+    }
 }
 .about {
-    margin-top: 0px;
+    margin-top: 0;
     @include fc;
     width: 100%;
-    padding-bottom: 120px;
+    padding-bottom: rem(120px);
+
+    @include tablets {
+        padding-bottom: 0;
+    }
 }
 .about-list {
     @include fc;
     width: 100%;
     margin: 0;
     padding: 0;
+    z-index: 100;
+
+    @include tablets {
+        flex-direction: column;
+    }
+    
+}
+.about-list__item {
+    @include fcc;
+
+   &:last-child {
+       margin-bottom: 0;
+   }
+    @include tablets {
+        margin-bottom: rem(25px);
+        width: 68%;
+    }
+    @include phones {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
 }
 .about-list__logo {
     @include fc;
-    width: 125px;
-    height: 125px;
+    width: rem(125px);
+    height: rem(125px);
     border-radius: 50%;
     background-color: #f2f5f4;
+
+    @include tablets {
+        margin-bottom: rem(25px);
+    }
+    @include phones {
+        margin-right: rem(13px);
+    }
+}
+.about-list__text {
+    text-align: center;
+    @include phones {
+        width: 63%;
+        text-align: start;
+    }
+}
+.about-list__item:nth-child(2)  {
     position: relative;
-  
+
     &:after {
         content: "";
         display: block;
@@ -70,53 +147,66 @@
         background-repeat: no-repeat;
         background-position: center center;
         position: absolute;
-        top: 45%;
-        right: -104%;
-        width: 67px;
-        height: 21px;
+        top: rem(52px);
+        left: rem(-33px);
+        width: rem(67px);
+        height: rem(21px);
+        
+        @include tablets {
+        content: none;
+        }
     }
-    
-}
-.about-list__item:last-child .about-list__logo:after {
-    content: none;
 
+    &:before {
+        content: "";
+        display: block;
+        background-image: url(./icons/png/swipe.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        position: absolute;
+        top: rem(52px);
+        right: rem(-33px);
+        width: rem(67px);
+        height: rem(21px);
+        
+        @include tablets {
+            content: none;
+        }
+    }
 }
 
 /*LOGO ABOUT*/
 
 .about-list__useful {
     @include svg;
-    width: 66px;
-    height: 69px;
+    width: rem(66px);
+    height: rem(69px);
 }
 .about-list__yum {
     @include svg;
-    width: 70px;
-    height: 69px;
+    width: rem(70px);
+    height: rem(69px);
 }
 .about-list__nutri {
     @include svg;
-    width: 75px;
-    height: 64px;
+    width: rem(75px);
+    height: rem(64px);
 }
 
-.about-list__item {
-    @include fcc;
-   
-}
 .about-list__text h3{
-    margin-top: 40px;
-    margin-bottom: 20px;
+    margin-top: rem(40px);
+    margin-bottom: rem(15px);
     @include bold;
-    font-size: 27px;
-    text-align: center;
+    font-size: rem(27px);
+
+    @include tablets {
+        margin-top: 0;
+    }
 }
 .about-list__text p {
     max-width: 91%;
     @include li-reg;
-    font-size: 18px;
-    text-align: center;
+    font-size: rem(18px);    
     color: #666666;
     margin-top: 0;
-    margin-right: 0;
 }
