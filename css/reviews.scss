@@ -70,14 +70,16 @@
 .reviews-list{
     @include ffsc;
     background: #f8faf9;
-    height: rem(600px);
-    width: rem(460px);
+    height: rem(355px);
+    width: 100%;
     margin-bottom: rem(21px);
     position: relative;
 
     @include tablets {
         justify-content: center;
         margin-bottom: rem(47px);
+        height: rem(600px);
+        width: rem(460px);
     }
 
     @include phones {
@@ -89,12 +91,16 @@
     &::before{
         content: '';
         position: absolute;
-        left: 40%;
-        right: 40%;
+        left: 45%;
         top: 0;
         height: rem(25px);
         width: rem(90px);
         background: url(./icons/png/label_reviews.png) center center no-repeat;
+
+        @include tablets {
+            left: 40%;
+            right: 40%;
+        }
     }
     &::after{
         content: '';
@@ -113,6 +119,7 @@
 .reviews-list__item {
     @include ffsc;
     display: none;
+    z-index: 10;
 
     @include tablets{
         flex-direction: column;
