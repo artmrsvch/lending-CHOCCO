@@ -1,8 +1,10 @@
 .menu {
     background: url(./icons/png/menu_backgorund.png) #000 no-repeat;
     background-size: cover;
+    display: flex;
+    justify-content: space-between;
     @include tablets {
-        height: 100vh;
+        height: 100%;
     }
 
     &::after{
@@ -10,7 +12,7 @@
         position: absolute;
         width: rem(104px);
         height: rem(114px);
-        z-index: 1;
+        z-index: 10;
         left: rem(33px);
         top: rem(-70px);
         background: url(./icons/png/team_back_raspberry.png) center center / cover no-repeat;
@@ -18,28 +20,24 @@
     }
 
 }
-.container__menu {
-    flex-direction: row;
-}
 .menu__headline {
     @include title;
+    width: 24.55%;
     color: #fff;
-    margin-top: rem(99px);
-    margin-right: rem(79px);
+    padding-top: rem(99px);
+
+    @include tablets {
+        display: none;
+    }
 }
 .bar-menu {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
     height: 100%;
     display: flex;
     justify-content: flex-end;
+    z-index: 1;
 
     @include tablets {
-       //left: 0;
-       //right: auto;
-        //justify-content: space-between;
+        width: 100%;
     }
 
     
@@ -56,16 +54,18 @@
     background: #000;
 
     @include tablets {
-        min-width: auto;
+    
+        //min-width: auto;
         //max-width: rem(100px);
         //width: 100%;
         //max-width: rem(100px);
-        width: rem(100px);
+        //width: rem(100px);
         //width: auto;
        //width: 13%;
 
     }
     @include phones {
+        min-width: auto;
         width: rem(80px);
 
     }
@@ -92,6 +92,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include tablets {
+       
+    }
 }
 
 .bar-menu__hover{
@@ -102,7 +106,7 @@
     width: 0;
     overflow: hidden;
 
-    &::after {
+    &::before{
         content: '';
         position: absolute;
         top: 0;
@@ -111,7 +115,7 @@
         right: 0;
         background-color: #2f3234;
         opacity: 0.93;
-        z-index: 0;
+        z-index: 1;
     }
    
 }
@@ -119,10 +123,21 @@
     //width: 55.2%;
     width: auto;
     @include tablets {
-        //width: 82.394%;
+        //width: 82%;
+        
         
     }
 }
+.bar-menu__hover_active .bar-menu__slide {
+
+    @include tablets {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+    }
+    
+}
+
 .bar-menu__slide h3 {
     writing-mode: vertical-lr;
     transform: rotate(180deg); 
@@ -133,7 +148,6 @@
     padding-top: rem(39px);
 }
 .bar-menu__hover p {
-    width: 81.13%;
     max-width: rem(370px);
     @include reg;
     color: #fff;
@@ -141,16 +155,17 @@
     font-size: rem(16px);
     text-align: start;
     padding: rem(50px) rem(30px);
-    z-index: 1;
+    z-index: 2;
 
     @include tablets {
-        max-width: auto;
+        max-width: none;
     }
+      
 }
 
 .close-slide {
     position: absolute;
-    z-index: 2;
+    z-index: 3;
     top: rem(26px);
     right: rem(32px);
     
