@@ -1,8 +1,13 @@
+
 .maps {
     width: 100%;
     height: 100%;
     background-image: url(./icons/png/background_maps.png);
     background-size:  cover;
+    background-position: center center;
+    @include tablets {
+        height: 100vh;
+    }
 }
 
 .footer {
