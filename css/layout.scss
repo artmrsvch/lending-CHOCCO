@@ -15,6 +15,9 @@ body {
     @include tablets {
         height: 100%;
     }
+    @include phones {
+        height: 100vh;
+    }
 }
 
 .container {

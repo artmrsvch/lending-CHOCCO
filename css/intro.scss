@@ -45,6 +45,9 @@
     @include tablets {
         justify-content: flex-start;
     }
+    @include phones {
+        justify-content: space-between;
+    }
 
     &::after{
         content: '';
@@ -207,8 +210,10 @@
 
     }
     @include phones {
-        margin-bottom: rem(27px);
-        margin-top: rem(19px);
+        margin-bottom: 3.375%;
+        margin-top: 2.125%;
+        height: 44.25%;
+        width: 100%;
     }
 }
 .media-content__img {
@@ -217,8 +222,8 @@
     position: relative;
     text-align: center;
     @include phones {
-        width: rem(341px);
-        height: rem(354px);
+        width: 73.24%;
+        height: 100%;
         
     }
     &::after {
@@ -232,8 +237,12 @@
         left: 0%;
         right: 0%;
         @include phones {
-            width: rem(341px);
-            height: rem(220px);
+            background-size: contain;
+            width: 100%;
+            height: 62%;
+            bottom: 0%;
+            left: 3%;
+            right: auto;
         }
         
 
@@ -243,8 +252,8 @@
     width: rem(403px);
     height: rem(419px);
     @include phones {
-        width: rem(317px);
-        height: rem(330px);
+        width: 96.06%;
+        height: 93.22%;
         
     }
 }
@@ -256,14 +265,17 @@
    position: relative;
    @include tablets {
        @include fc;
-       margin-bottom: rem(40px);
+       margin-bottom: 5%;
+   }
+   @include phones {
+       height: 31.5%;
    }
    
     
 }
 .pictures__bar {
     position: absolute;
-    right: rem(-50px);
+    right: 0;
     top: rem(-95px);
     @include tablets {
         display: none;
@@ -292,7 +304,7 @@
     line-height: 1;
     
     @include phones {
-        font-size: rem(46px);
+        font-size: 6vh;
     }
 }
 .subtitle-bar {
@@ -305,9 +317,9 @@
     margin-bottom: rem(35px);
 
     @include phones {
-        font-size: rem(18px);
-        margin-bottom: rem(25px);
-        margin-top: rem(5px);
+        font-size: 2.8vh;
+        margin-bottom: 9%;
+        margin-top: 1.8%;
     }
 
 }
@@ -346,6 +358,10 @@
         margin-top: 0;
         //padding-bottom: 0;
     }
+    @include phones {
+        height: 7%;
+        padding-bottom: 5.625%
+    }
 
     &::after {
         content: '';
@@ -374,6 +390,7 @@
     }
     @include phones {
         width: 100%;
+        height: 16.875%;
         padding: 0;
         justify-content: space-between;
     }
@@ -390,14 +407,17 @@
     }
     @include phones {
         justify-content: space-between;
-        width: 25%;
+        width: 28%;
+        &:last-child {
+            width: 28%;
+        }
     }
 
 }
 
-.features-list__item:last-child .features-list__text {
+/*.features-list__item:last-child .features-list__text {
     width: rem(70px);
-}
+}*/
 
 .features-list__text {
     display: inline-block;
@@ -414,6 +434,7 @@
     @include phones {
         width: 56%;
         margin-right: 0;
+        font-size: 2vh;
     }
 
 }
