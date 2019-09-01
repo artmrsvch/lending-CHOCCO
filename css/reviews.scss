@@ -57,15 +57,18 @@
 .reviews__title {
     @include title;
     margin: 0;
-    padding-top: rem(69px);
+    padding-top: 8.85%;
     margin-bottom: rem(44px); 
 
     @include phones {
-        margin-bottom: rem(34px);
+        margin-bottom: 4.25%;
     }
 }
 .reviews__content {
     margin:0 auto;
+    @include phones {
+        flex: 1;
+    }
 }
 .reviews-list{
     @include ffsc;
@@ -84,8 +87,8 @@
 
     @include phones {
         width: 100%;
-        height: rem(486px);
-        margin-bottom: rem(40px);
+        height: 81.8%;
+        margin-bottom: 5.77%;
     }
 
     &::before{
