@@ -104,6 +104,9 @@
             left: 40%;
             right: 40%;
         }
+        @include phones {
+            z-index: 1;
+        }
     }
     &::after{
         content: '';
@@ -175,11 +178,18 @@
     color: #323232;
     font-size: rem(30px);
     margin: 0;
+    @include phones {
+        font-size: 4.25vh;
+    }
 }
 .reviews-list__comment p {
     @include regular-grey;
     margin-top: rem(25px);
     margin-bottom: rem(27px);
+
+    @include phones {
+        font-size: 2.6vh;
+    }
 }
 .reviews-list__author {
     @include regular-grey;

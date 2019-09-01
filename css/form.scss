@@ -52,8 +52,9 @@
     }
 
     @include phones {
-        padding-top: rem(55px);
+        padding-top: 7.69%;
         margin-bottom: 0;
+        font-size: 5.21vh;
     }
 }
 
@@ -72,6 +73,7 @@
     }
     @include phones {
         width: 100%;
+        height: 76.59%;
         padding-bottom: rem(55px);
         
     }
@@ -89,7 +91,14 @@
        margin-right: 0;
    }
 }
-
+.form-block__top {
+    
+}
+.form-block__bot {
+    @include phones {
+        height: 54.5%;
+    }
+}
 
                         /*LEFT FORM*/
 
@@ -131,10 +140,14 @@
     margin-bottom: rem(20px);
     resize: none;
     width: 100%;
+    
     border: none;
     outline: 0;
     &:focus {
         border: rem(3px) solid #dde3bd;
+    }
+    @include phones {
+        height: rem(106px);
     }
 }
 
