@@ -123,6 +123,7 @@
     display: none;
     @include tablets {
         display: block;
+        cursor: pointer;
     }
 
     &::before {

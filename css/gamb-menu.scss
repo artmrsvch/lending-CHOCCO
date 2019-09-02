@@ -1,0 +1,44 @@
+.gamb-menu {
+    display: none;
+    background:#2f3234;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+
+}
+.gamb-menu__list {
+    padding-top: 14.3%;
+    height: 45.6%;
+    margin: 0, auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    
+    @include phones {
+        height: 65%;
+        padding-top: 19.875%;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: rem(20px);
+        height: rem(20px);
+        z-index: 1001;
+        top: rem(32px);
+        right: rem(36px);
+        cursor: pointer;
+        background: url("./icons/png/cross.png") center center / contain no-repeat;
+    }
+}
+.gamb-menu__link {
+    text-decoration: none;
+    @include reg;
+    font-size: rem(36px);
+    color: #fff;
+}
