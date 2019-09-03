@@ -169,25 +169,107 @@
                 </div><!--about-->
             </div> <!--container-->
         </section>
-        <!--<section class="section descript">
-            <div class="container">
+        <section class="section descript">
+            <button class="descript-menu__scroll descript-menu__scroll-left">
+                <img src="./icons/png/arrow-scroll-left.png" class="arrow-scroll" alt="">
+            </button>
+            <div class="container descript__container">               
                 <div class="descript-menu">
                     <div class="descript-menu__picture">
-                        <img src="" class="descript-menu__img" alt="">
+                        <img src="./icons/png/bars_menu.png" class="descript-menu__img" alt="bars">
                     </div>
                     <div class="descript-menu__content">
-                        <h2 class="descript-menu__title"></h2>
+                        <div class="descript-menu__hover">
+                            <button class="composition-btn">состав</button>
+                            <ul class="descript-composition">
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#grape"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Виноград</span>
+                                        <span class="descript-composition__weight">25 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#nut"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Грецкий орех</span>
+                                        <span class="descript-composition__weight">32 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#alm"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Кунжутное семя</span>
+                                        <span class="descript-composition__weight">20 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#was"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Сухое молоко</span>
+                                        <span class="descript-composition__weight">10 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#shape"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Зам. сахара</span>
+                                        <span class="descript-composition__weight">4 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#beans"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Какао бобы</span>
+                                        <span class="descript-composition__weight">4 г</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="descript-menu__title">Батончик “Морские 
+                                водоросли”
+                        </h2>
                         <ul class="descript-menu__list">
-                            <li class="descriot-menu__item">
-                                
+                            <li class="descript-menu__item">
+                                <p>Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </p>
                             </li>
-                            <li class="descriot-menu__item"></li>
-                            <li class="descriot-menu__item"></li>
+                            <li class="descript-menu__item">
+                                <span class="descript-menu__calory">
+                                    Калорийность<br>
+                                    <strong>120 ккал</strong>
+                                </span>
+                                <span class="descript-menu__weight">
+                                    Вес<br>
+                                    <strong>98 грамм</strong>
+                                </span>
+                            </li>
+                            <li class="descript-menu__item">
+                                <span class="descript-menu__price">140 &#8381; </span>
+                                <button type="button" form="#form-id" class="btn btn_green">
+                                    заказать
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section>-->
+            <button class="descript-menu__scroll descript-menu__scroll-right">
+                <img src="./icons/png/arrow-scroll-right.png" alt="">
+            </button>
+        </section>
         <section id="team" class="section team">
             <div class="container team__container">
                 <h2 class="team__title">Команда</h2>
@@ -371,7 +453,7 @@
         <section id="delivery" class="section delivery delivery-style">
             <div class="container form-container">
                 <h2 class="form-title">закажи доставку</h2>
-                <form action="" class="form-element">
+                <form action="" id="form-id" class="form-element">
                     <div class="form-block form-block__top">
                         <div class="form-coloumn">
                             <label class="form-item">
