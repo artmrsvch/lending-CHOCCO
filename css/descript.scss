@@ -43,12 +43,19 @@
         left: 20.573%;
     }
 
+    @include phones {
+        left: 2.1%;
+    }
 }
 .descript-menu__scroll-right {
     padding-right: 5%;
     @include tablets {
         padding-right: 0;
         right: 20.573%;
+    }
+
+    @include phones {
+        right: 2.1%;
     }
 
 }
