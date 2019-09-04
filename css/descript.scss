@@ -4,6 +4,9 @@
     background-position: right bottom;
     background-repeat: no-repeat; 
     @include fsbc;
+    @include tablets {
+        height: 100vh;
+    }
 }
 
 .descript__container {
@@ -15,17 +18,39 @@
     width: 86.77%;
     height: 73.23%;
     margin: 0 auto;
+
+    @include tablets {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+    }
 }
 .descript-menu__scroll {
     @include fcc;
     border: none;
     z-index: 10;
+
+    @include tablets {
+        position: absolute;
+        top: 23%;
+    }
+
 }
 .descript-menu__scroll-left {
     padding-left: 5%;
+    @include tablets {
+        padding-left: 0;
+        left: 20.573%;
+    }
+
 }
 .descript-menu__scroll-right {
     padding-right: 5%;
+    @include tablets {
+        padding-right: 0;
+        right: 20.573%;
+    }
+
 }
 .arrow-scroll {
     width: rem(13px);
@@ -42,6 +67,13 @@
     height: rem(396px);
     position: relative;
     margin-right: 11.165%;
+    @include tablets {
+        min-width: auto;
+        width: 40.89%;
+        height: 38.9%;
+        margin-right: 0;
+        margin-bottom: 6.2%;
+    }
 
     &::before {
         content: '';
@@ -51,6 +83,10 @@
         background: url(../icons/png/grab_menu.png) center center / contain no-repeat;
         top: rem(55px);
         left: rem(-65px);
+        @include tablets {
+            top: -7%;
+            left: -13%;
+        }
     }
 }
 
@@ -66,6 +102,12 @@
     justify-content: space-between;
     align-items: flex-start;
     position: relative;
+    @include tablets {
+        position: static;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
 }
 
                     /* HOVER */
@@ -73,6 +115,12 @@
 
 .descript-menu__hover {
     height: 18.907%;
+    @include tablets {
+        position: absolute;
+        top: 3%;
+        right: 3.4%;
+        height: 46.87%;
+    }
 }
 .descript-composition__item {
     @include fsbc;
@@ -88,6 +136,9 @@
     font-size: rem(14px);
     color: #fff;
     position: relative;
+    @include tablets {
+        position: static;
+    }
     &::after{
         content: '';
         position: absolute;
@@ -98,6 +149,10 @@
         background-position: center center;
         top: 7%;
         left: 23%;
+        @include tablets {
+            top: -21%;
+        }
+        
     }
 }
 .descript-composition__sprite {
@@ -119,6 +174,11 @@
     right: 0;
     top: 0;
     padding: 8.816% 7.407% 8.816% 11.48%;
+    @include tablets {
+        width: rem(270px);
+        height: 100%;
+        right: 100%;
+    }
 }
 .descript-menu__hover:hover .descript-composition {
     display: flex;
@@ -137,6 +197,12 @@
     @include reg;
     text-transform: uppercase;
     font-size: rem(32px);
+    @include tablets {
+        width: 50.7%;
+        text-align: center;
+        margin-bottom: rem(15px);
+    }
+    
 }
 .descript-menu__list {
     display: flex;
@@ -144,21 +210,38 @@
     justify-content: space-between;
     align-items: flex-start;
     height: 53.57%;
+
+    @include tablets {
+       
+    }
 }
 .descript-menu__item {
     display: flex;
     align-items: center;
     width: 100%;
+    @include tablets {
+        justify-content: center;
+        margin-bottom: rem(27px);
+    }
 }
 .descript-menu__item p {
     @include regular-grey;
     padding-bottom: 4%;
+
+    @include tablets {
+        width: 80%;
+        text-align: center;
+    }
+
 }
 .descript-menu__calory {
     color: #333;
     @include reg;
     margin-right: 15.537%;
     width: rem(101px);
+    @include tablets {
+        margin-right: 11%;
+    }
 }
 .descript-menu__weight {
     color: #333;
@@ -174,4 +257,8 @@
     line-height: 0.7em;
     min-width: 38%;
     text-align: center;
+    @include tablets {
+        min-width: auto;
+        margin-right: 4%;
+    }
 }
