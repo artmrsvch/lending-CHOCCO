@@ -86,6 +86,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 
 
     @include phones {
@@ -120,6 +121,7 @@
 }
 .bar-menu__hover_active {
     flex: 1;
+    
     @include phones {
         position: absolute;
         top: 0;

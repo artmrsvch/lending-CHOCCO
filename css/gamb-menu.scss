@@ -6,9 +6,11 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 1000;
-    overflow: hidden;
+    z-index: 5;
 
+}
+.gamb__activ {
+    display: block;
 }
 .gamb-menu__list {
     padding-top: 14.3%;
@@ -25,7 +27,7 @@
         padding-top: 19.875%;
     }
 
-    &::after {
+    /*&::after {
         content: '';
         position: absolute;
         width: rem(20px);
@@ -35,7 +37,7 @@
         right: rem(36px);
         cursor: pointer;
         background: url("./icons/png/cross.png") center center / contain no-repeat;
-    }
+    }*/
 }
 .gamb-menu__link {
     text-decoration: none;
