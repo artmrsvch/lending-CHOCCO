@@ -49,6 +49,9 @@
     font-size: 48px;
     text-transform: uppercase;
     text-align: center;
+    @include phones {
+        font-size: 40px;
+    }
 }
 @mixin fc {
     display: flex;

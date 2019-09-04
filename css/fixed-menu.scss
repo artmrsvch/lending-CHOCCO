@@ -2,6 +2,9 @@
 position: fixed;
 top: 33%;
 right: 46px;
+@include tablets {
+    display: none;
+}
 }
 
 

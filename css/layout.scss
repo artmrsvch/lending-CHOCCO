@@ -1,20 +1,40 @@
 
+html {
+    font-size: 18px;
+}
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 //Selectors
+.wrapper {
+    overflow: hidden;
+}
 .section {
     @include section;
+    @include tablets {
+        height: 100%;
+    }
+    @include phones {
+        height: 100%;
+    }
 }
 
 .container {
     margin: 0 auto;
-    width: 100%;
-    max-width: 940px;
-    padding: 0 10px;
+    width: 98%;
+    max-width: 960px;
     height: 100%;
-   
+    display: flex;
+    flex-direction: column;
+    @include tablets {
+        max-width: 768px;
+        width: 93%;
+    }
+    @include phones {
+        max-width: 480px;
+        width: 97%;
+    }
 }
 
 //Setting
@@ -33,6 +53,7 @@ ul {
 li {
     list-style-type: none;
 }
+
 p {
     margin: 0;
 }
@@ -41,4 +62,8 @@ button {
     background: transparent;
     cursor: pointer;
     outline: 0;
+}
+img {
+    max-width: 100%;
+    height: auto;
 }
