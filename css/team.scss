@@ -160,10 +160,10 @@
 
             /*ACTIVE MODIFICATION*/
 
-.team-list_activ .team-list-info{
+.team-list__item_activ .team-list-info{
     height: auto;
 }
-.team-list_activ .team-list-name::after{
+.team-list__item_activ .team-list-name::after{
     border-top: none;
     border-bottom: 9px solid #0f5a47;
 }

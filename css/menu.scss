@@ -4,7 +4,7 @@
     display: flex;
     justify-content: space-between;
     @include tablets {
-        height: 100%;
+        height: 100vh;
     }
 
     &::after{
@@ -39,6 +39,9 @@
     @include tablets {
         width: 100%;
     }
+    @include phones {
+        position: relative;
+    }
 
     
 }
@@ -54,20 +57,11 @@
     background: #000;
 
     @include tablets {
+        min-width: 13.02084vw;
     
-        //min-width: auto;
-        //max-width: rem(100px);
-        //width: 100%;
-        //max-width: rem(100px);
-        //width: rem(100px);
-        //width: auto;
-       //width: 13%;
-
     }
     @include phones {
-        min-width: auto;
-        width: rem(80px);
-
+        min-width: 16.67vw;
     }
     
 }
@@ -92,8 +86,10 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 
-    @include tablets {
+
+    @include phones {
        
     }
 }
@@ -116,27 +112,60 @@
         background-color: #2f3234;
         opacity: 0.93;
         z-index: 1;
+        @include tablets {
+            content: none;
+        }
     }
+    
    
 }
 .bar-menu__hover_active {
-    //width: 55.2%;
-    width: auto;
-    @include tablets {
-        //width: 82%;
-        
-        
-    }
-}
-.bar-menu__hover_active .bar-menu__slide {
-
-    @include tablets {
-        display: flex;
+    flex: 1;
+    
+    @include phones {
         position: absolute;
-        justify-content: center;
+        top: 0;
+        bottom: 0;
     }
     
 }
+
+                    /* ИНСТРУКЦИИ */
+
+.bar-menu__hover_active .bar-menu__hover{
+    width: auto;
+    @include tablets {
+        position: relative;
+        width: 100%;
+    }
+    @include phones {
+        position: static;
+    }
+}
+.bar-menu__hover_active p {
+    @include tablets {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    } 
+    @include phones {
+        position: static;
+    } 
+}
+.bar-menu__item+.bar-menu__hover_active {
+    @include phones {
+        order: -5;
+    }
+}
+.bar-menu__hover_active .bar-menu__hover .bar-menu__slide {
+    @include phones {
+        position: absolute;
+        right: 33.34vw;
+    }
+}
+/*.bar-menu__hover_active~.bar-menu__item {
+    position: absolute;
+}*/
 
 .bar-menu__slide h3 {
     writing-mode: vertical-lr;
@@ -159,6 +188,11 @@
 
     @include tablets {
         max-width: none;
+        background-color: rgba(47, 50, 52, 0.93);
+        padding: rem(66px) 13% 0 rem(30px);
+    }
+    @include phones {
+        
     }
       
 }

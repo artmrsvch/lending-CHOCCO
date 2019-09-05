@@ -10,7 +10,32 @@
 </head>
 <body>
     <div class="wrapper">
-        <section class="section intro">
+        <div class="gamb-menu">
+                <ul class="gamb-menu__list">
+                    <li class="gamb-menu__item">
+                        <a href="#about" class="gamb-menu__link">О нас</a>
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="" class="gamb-menu__link">Батончики</a>
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="#team" class="gamb-menu__link">Команда</a>                            
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="#menu" class="gamb-menu__link">Меню</a>
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="#reviews" class="gamb-menu__link">Отзывы</a>
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="" class="gamb-menu__link">Как мы работаем</a>
+                    </li>
+                    <li class="gamb-menu__item">
+                        <a href="#map" class="gamb-menu__link">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+        <section id="intro" class="section intro">
             <div class="container intro__container"> 
                 <header class="header">
                     <div class="header__logo">cho<br>cco</div>
@@ -18,19 +43,19 @@
                     <nav class="header__nav">
                         <ul class="menu-list">
                             <li class="menu-list__item">
-                                <a href="" class="menu-list__link">О нас</a>
+                                <a href="#about" class="menu-list__link">О нас</a>
                             </li>
                             <li class="menu-list__item">
-                                <a href="" class="menu-list__link">Батончики</a>
+                                <a href="#descript" class="menu-list__link">Батончики</a>
                             </li>
                             <li class="menu-list__item">
-                                <a href="" class="menu-list__link">Команда</a>
+                                <a href="#team" class="menu-list__link">Команда</a>
                             </li>
                             <li class="menu-list__item">
-                                <a href="" class="menu-list__link">Меню</a>
+                                <a href="#menu" class="menu-list__link">Меню</a>
                             </li>
                             <li class="menu-list__item">
-                                <a href="" class="menu-list__link">Отзывы</a>
+                                <a href="#reviews" class="menu-list__link">Отзывы</a>
                             </li>
                             <li class="menu-list__item">
                                 <a href="" class="menu-list__link">Как мы работаем</a>
@@ -94,7 +119,7 @@
                 </div> <!-- sub-content -->
             </div> <!-- container --> 
         </section> 
-        <section class="section why-chocco">
+        <section id="about" class="section why-chocco">
             <div class="container container__why-chocco">
                 <div class="chocco-description">
                     <h2 class="chocco-description__title">почему chocco?</h2>
@@ -144,26 +169,108 @@
                 </div><!--about-->
             </div> <!--container-->
         </section>
-        <!--<section class="section descript">
-            <div class="container">
+        <section id="descript" class="section descript">
+            <button class="descript-menu__scroll descript-menu__scroll-left">
+                <img src="./icons/png/arrow-scroll-left.png" class="arrow-scroll" alt="">
+            </button>
+            <div class="container descript__container">               
                 <div class="descript-menu">
                     <div class="descript-menu__picture">
-                        <img src="" class="descript-menu__img" alt="">
+                        <img src="./icons/png/bars_menu.png" class="descript-menu__img" alt="bars">
                     </div>
                     <div class="descript-menu__content">
-                        <h2 class="descript-menu__title"></h2>
+                        <div class="descript-menu__hover">
+                            <button class="composition-btn">состав</button>
+                            <ul class="descript-composition">
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#grape"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Виноград</span>
+                                        <span class="descript-composition__weight">25 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#nut"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Грецкий орех</span>
+                                        <span class="descript-composition__weight">32 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#alm"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Кунжутное семя</span>
+                                        <span class="descript-composition__weight">20 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#was"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Сухое молоко</span>
+                                        <span class="descript-composition__weight">10 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#shape"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Зам. сахара</span>
+                                        <span class="descript-composition__weight">4 г</span>
+                                    </div>
+                                </li>
+                                <li class="descript-composition__item">
+                                    <svg class="descript-composition__sprite">
+                                        <use xlink:href="./icons/sprite.svg#beans"></use>
+                                    </svg>
+                                    <div class="descript-composition__block">
+                                        <span class="descript-composition__text">Какао бобы</span>
+                                        <span class="descript-composition__weight">4 г</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <h2 class="descript-menu__title">Батончик <br>“Морские 
+                                водоросли”
+                        </h2>
                         <ul class="descript-menu__list">
-                            <li class="descriot-menu__item">
-                                
+                            <li class="descript-menu__item">
+                                <p>Гранола из морских водорослей с овсом, миндалем и тыквенными семечками. В состав также входят: сухое молоко, заменитель сахара и какао бобы.
+                                </p>
                             </li>
-                            <li class="descriot-menu__item"></li>
-                            <li class="descriot-menu__item"></li>
+                            <li class="descript-menu__item">
+                                <span class="descript-menu__calory">
+                                    Калорийность<br>
+                                    <strong>120 ккал</strong>
+                                </span>
+                                <span class="descript-menu__weight">
+                                    Вес<br>
+                                    <strong>98 грамм</strong>
+                                </span>
+                            </li>
+                            <li class="descript-menu__item">
+                                <span class="descript-menu__price">140 &#8381; </span>
+                                <button type="button" form="#form-id" class="btn btn_green">
+                                    заказать
+                                </button>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </section>-->
-        <section class="section team">
+            <button class="descript-menu__scroll descript-menu__scroll-right">
+                <img src="./icons/png/arrow-scroll-right.png" alt="">
+            </button>
+        </section>
+        <section id="team" class="section team">
             <div class="container team__container">
                 <h2 class="team__title">Команда</h2>
                 <div class="team__content">
@@ -226,7 +333,63 @@
                 </div>
             </div>
         </section>
-        <section class="section reviews">
+        <section id="menu" class="section menu">
+            <!--<div class="container container__menu">-->
+                <h2 class="menu__headline">меню</h2>
+                <ul class="bar-menu">
+                    <li class="bar-menu__item">
+                        <div class="bar-menu__slide bar-menu__slide_barmilk">
+                            <h3>Батончики с молоком</h3>
+                        </div>
+                        <div class="bar-menu__hover">
+                            <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
+                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                            </p>
+                            <div class="bar-menu__slide bar-menu__slide_barmilk">
+                                <h3>Батончики с молоком</h3>
+                            </div>
+                            <div class="close-slide">
+                                <button type="button" class="close-slide__btn"></button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="bar-menu__item">
+                        <div class="bar-menu__slide bar-menu__slide_honey">
+                            <h3 class="barh">С мёдом и фруктами</h3>
+                        </div>
+                        <div class="bar-menu__hover">
+                            <p class="barp">Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
+                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                            </p>
+                            <div class="bar-menu__slide bar-menu__slide_honey">
+                                <h3>С мёдом и фруктами</h3>
+                            </div>
+                            <div class="close-slide">
+                                <button type="button" class="close-slide__btn"></button>
+                            </div>
+                        </div>
+                    </li>
+                     <li class="bar-menu__item">
+                        <div class="bar-menu__slide bar-menu__slide_berry">
+                            <h3>Дикие ягоды</h3>
+                        </div>
+                        <div class="bar-menu__hover">
+                           <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
+                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
+                            </p>
+                            <div class="bar-menu__slide bar-menu__slide_berry">
+                                <h3>Дикие ягоды</h3>
+                            </div>
+                            <div class="close-slide">
+                                <button type="button" class="close-slide__btn"></button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            
+           <!--</div>-->
+        </section>
+        <section id="reviews" class="section reviews">
             <div class="container reviews__container">
                 <h2 class="reviews__title">отзывы</h2>
                 <div class="reviews__content">
@@ -287,66 +450,10 @@
                 </div> <!--reviews__content-->
             </div> <!--container-->
         </section>
-        <section class="section menu">
-            <!--<div class="container container__menu">-->
-                <h2 class="menu__headline">меню</h2>
-                <ul class="bar-menu">
-                    <li class="bar-menu__item">
-                        <div class="bar-menu__slide bar-menu__slide_barmilk">
-                            <h3>Батончики с молоком</h3>
-                        </div>
-                        <div class="bar-menu__hover bar-menu__hover_active">
-                            <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
-                            </p>
-                            <div class="bar-menu__slide bar-menu__slide_barmilk">
-                                <h3>Батончики с молоком</h3>
-                            </div>
-                            <div class="close-slide">
-                                <button type="button" class="close-slide__btn"></button>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="bar-menu__item">
-                        <div class="bar-menu__slide bar-menu__slide_honey">
-                            <h3>С мёдом и фруктами</h3>
-                        </div>
-                        <div class="bar-menu__hover">
-                            <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
-                            </p>
-                            <div class="bar-menu__slide bar-menu__slide_honey">
-                                <h3>С мёдом и фруктами</h3>
-                            </div>
-                            <div class="close-slide">
-                                <button type="button" class="close-slide__btn"></button>
-                            </div>
-                        </div>
-                    </li>
-                     <li class="bar-menu__item">
-                        <div class="bar-menu__slide bar-menu__slide_berry">
-                            <h3>Дикие ягоды</h3>
-                        </div>
-                        <div class="bar-menu__hover">
-                           <p>Рекомендуем употреблять батончики вместе с кокосовым или миндальным молоком. Так и вкуснее, и полезнее. 
-                            Ну чего ещё хотеть от жизни? Батончик – он твой лучший друг и радует всех вокруг. Как классно, что можно питаться полезно и вкусно, а не как попало. Бабуля, конечно, за такую еду не похвалит, но кто её будет спрашивать – никто. Надо бы, кстати, бабулю поздравить с днём Победы. 
-                            </p>
-                            <div class="bar-menu__slide bar-menu__slide_berry">
-                                <h3>Дикие ягоды</h3>
-                            </div>
-                            <div class="close-slide">
-                                <button type="button" class="close-slide__btn"></button>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            
-           <!--</div>-->
-        </section>
-        <section class="section delivery delivery-style">
+        <section id="delivery" class="section delivery delivery-style">
             <div class="container form-container">
                 <h2 class="form-title">закажи доставку</h2>
-                <form action="" class="form-element">
+                <form action="" id="form-id" class="form-element">
                     <div class="form-block form-block__top">
                         <div class="form-coloumn">
                             <label class="form-item">
@@ -419,7 +526,7 @@
                 </form>
             </div>
         </section>
-        <section class="section map-footer">
+        <section id="map" class="section map-footer">
             <div class="maps"></div>
                 <footer class="footer">
                     <div class="footer__container">
