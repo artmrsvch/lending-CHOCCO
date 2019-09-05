@@ -7,8 +7,12 @@ const gambMenu = document.querySelector('.gamb-menu');
 const icoGamb = document.querySelector('.header__gamburger');
 const header = document.querySelector('.header');
 const logo = document.querySelector('.header__logo');
+const gambMenuItems = document.querySelectorAll('.gamb-menu__item');
+
+
 
 icoGamb.addEventListener('click', function(e){
+   
     gambMenu.classList.toggle('gamb__activ');
     header.classList.toggle('header__activ');
 
@@ -20,6 +24,19 @@ icoGamb.addEventListener('click', function(e){
         logo.style.opacity='1';
     }
 })
+
+for(let i = 0;i<gambMenuItems.length; i++){
+    gambMenuItems[i].addEventListener('click', function(e){
+        e.stopPropagation();
+        gambMenu.classList.remove('gamb__activ');
+        header.classList.remove('header__activ');
+        if(document.body.style.overflow=='hidden'){
+            document.body.style.overflow='visible';
+            logo.style.opacity='1';
+        }
+    })
+}
+
 
 
 
