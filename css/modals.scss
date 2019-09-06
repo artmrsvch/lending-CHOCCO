@@ -1,0 +1,38 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #2F3234;
+    opacity: 0.93;
+    @include fc;
+    z-index: 999;
+}
+
+.content {
+    @include reg;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.close {
+    @include exb-reg;
+    border-radius: rem(40px);
+    box-sizing: border-box;
+    width: rem(156px);
+    height: rem(58px);
+    text-transform: uppercase;
+    box-shadow: 0 0 rem(10px) rgba(0, 0, 0, 0.3);
+    background: $green;
+    color: #fff;
+    padding: rem(20px) rem(33px);
+    text-align: center;
+    text-decoration: none;
+}
+.overlay__container {
+    @include fcc;
+    z-index: 111112;
+    width: rem(300px);
+    height: rem(172px);
+    background: #fff;
+}

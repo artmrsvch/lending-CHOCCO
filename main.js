@@ -116,7 +116,7 @@ const revComm = document.querySelectorAll('.reviews-commentators__item');
 const revCommLength = revComm.length;
 
 for(let m = 0; m<revCommLength; m++){
-    revComm[m].addEventListener('click', function(e){
+    revComm[m].addEventListener( 'click', function(e){
         for(let m = 0; m<revCommLength; m++) {
             revComm[m].classList.remove('reviews-commentators_active');
             revList[m].classList.remove('reviews-list_active');
@@ -126,3 +126,35 @@ for(let m = 0; m<revCommLength; m++){
     })
 }
 
+                        /* МОДАЛКА  */
+
+
+//const openButton = document.querySelector(".wrapper");
+const successOverlay = createOverlay("Сообщение отправлено");
+
+openButton.addEventListener("click", function() {
+  document.body.appendChild(successOverlay);
+
+  
+  document.body.style.overflow='hidden';
+});
+
+function createOverlay(content) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#overlayTemplate");
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector(".close");
+  closeElement.addEventListener("click", function(eve) {
+      eve.preventDefault();
+      document.body.style.overflow='visible';
+    document.body.removeChild(overlayElement);
+  });
+
+  const contentElement = overlayElement.querySelector(".content");
+  contentElement.innerHTML = content;
+
+  return overlayElement;
+}
