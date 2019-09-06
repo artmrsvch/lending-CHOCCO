@@ -87,3 +87,42 @@ for(let i = 0; i<teamLength; i++){
             }
     })
 }
+
+                /* СЛАЙДЕР ОПИСАНИЕ */
+
+const left = document.querySelector('.descript-menu__scroll-left');
+const right = document.querySelector('.descript-menu__scroll-right');
+const descSlider = document.querySelector('.descript-slider');
+
+right.addEventListener('click', function(){
+    swipe('right');
+})
+left.addEventListener('click', function(){
+    swipe('left');
+})
+function swipe(direct){
+    if(direct=='right'){
+        descSlider.appendChild(descSlider.firstElementChild);
+    } else {
+        descSlider.insertBefore(descSlider.lastChild, descSlider.firstElementChild);
+        
+    }
+}
+
+                        /* ОТЗЫВЫ */
+
+const revList = document.querySelectorAll('.reviews-list__item');
+const revComm = document.querySelectorAll('.reviews-commentators__item');
+const revCommLength = revComm.length;
+
+for(let m = 0; m<revCommLength; m++){
+    revComm[m].addEventListener('click', function(e){
+        for(let m = 0; m<revCommLength; m++) {
+            revComm[m].classList.remove('reviews-commentators_active');
+            revList[m].classList.remove('reviews-list_active');
+        }
+        revComm[m].classList.add('reviews-commentators_active');
+        revList[m].classList.add('reviews-list_active');
+    })
+}
+
