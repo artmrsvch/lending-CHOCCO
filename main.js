@@ -126,18 +126,36 @@ for(let m = 0; m<revCommLength; m++){
     })
 }
 
-                        /* МОДАЛКА  */
+                /* ОБРАБОТКА ВВОДА */
+
+const phoneInput = document.querySelector('#phones');
+
+phoneInput.addEventListener('keydown', function (event){
+    let isDigit = false;
+
+    if(event.key >= 0 || event.key <= 9 || event.key == '+' || event.key == '-' || event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace'){
+        isDigit = true;
+    }
+    if(!isDigit) {
+      event.preventDefault();
+    }
+})
+                    /* МОДАЛКА  */
 
 
-//const openButton = document.querySelector(".wrapper");
-const successOverlay = createOverlay("Сообщение отправлено");
+const openButton = document.querySelector("#form__btn");
+const successOverlayYes = createOverlay("Сообщение отправлено");
+const successOverlayNo = createOverlay("Сообщение не отправлено");
 
-openButton.addEventListener("click", function() {
-  document.body.appendChild(successOverlay);
-
-  
+function yes(e) {
+  document.body.appendChild(successOverlayYes);
   document.body.style.overflow='hidden';
-});
+  myform.elements.btnReset.click();
+}
+function no(e) {
+    document.body.appendChild(successOverlayNo);
+    document.body.style.overflow='hidden';
+  }
 
 function createOverlay(content) {
   const overlayElement = document.createElement("div");
@@ -148,8 +166,8 @@ function createOverlay(content) {
 
   const closeElement = overlayElement.querySelector(".close");
   closeElement.addEventListener("click", function(eve) {
-      eve.preventDefault();
-      document.body.style.overflow='visible';
+    eve.preventDefault();
+    document.body.style.overflow='visible';
     document.body.removeChild(overlayElement);
   });
 
@@ -158,3 +176,65 @@ function createOverlay(content) {
 
   return overlayElement;
 }
+
+                /* ФОРМА ОТПРАВКИ */
+
+const myform = document.querySelector('#form-id');
+
+openButton.addEventListener('click', function(e){
+    e.preventDefault();
+    if(validateForm(myform)) {
+        
+        const fd = new FormData(myform);
+        fd.set('name', myform.elements.name.value);
+        fd.set('phone', myform.elements.phone.value);
+        fd.set('comment', myform.elements.comment.value);
+        fd.append('to', 'test@gmail.com');
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.responseType = 'json';
+        xhr.open('POST','https://webdev-api.loftschool.com/sendmail', true);
+        xhr.send(fd);
+        xhr.addEventListener('load',()=>{
+            if(xhr.response.status === 1) {
+                yes(e);
+                setTimeout(() => {
+                    document.querySelector('.close').click();
+                }, 2000);      
+            } else {
+                no(e);
+                setTimeout(() => {
+                    document.querySelector('.close').click();
+                }, 2000);  
+            } 
+        })
+    }
+})
+function validateForm(form) {
+    let valid = true;
+
+    if(!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.street)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.house)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+}
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}
+
+
+    
