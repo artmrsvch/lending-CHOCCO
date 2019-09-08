@@ -91,9 +91,7 @@
        margin-right: 0;
    }
 }
-.form-block__top {
-    
-}
+
 .form-block__bot {
     @include phones {
         height: 54.5%;
@@ -236,16 +234,18 @@
     &::before {
         content: '';
         position: absolute;
-        top: 33%;
-        left: 33%;
+        top: 29%;
+        left: 26%;
         width: rem(11px);
-        height: rem(9px);
-        background: url(./icons/png/checkbox_active.png) no-repeat;
+        height: rem(6px);
+        border-bottom: $green 3px solid;
+        border-left: $green 3px solid;
         transform: scale(0);
+        
     }
 }
 .form-checkbox:checked+.checkbox-style::before {
-    transform: scale(1);
+    transform: rotate(315deg) scale(1);
 }
 .button-block {
     @include tablets {

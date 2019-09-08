@@ -171,7 +171,9 @@
         </section>
         <section id="descript" class="section descript">
             <button class="descript-menu__scroll descript-menu__scroll-left">
-                <img src="./icons/png/arrow-scroll-left.png" class="arrow-scroll" alt="">
+                <svg class="arrow-scroll">
+                    <use xlink:href="./icons/sprite.svg#arrow"></use>
+                </svg>
             </button>
             <div class="container descript__container"> 
                 <ul class="descript-slider">           
@@ -181,7 +183,12 @@
                     </div>
                     <div class="descript-menu__content">
                         <div class="descript-menu__hover">
-                            <button class="composition-btn">состав</button>
+                            <div class="composition-btn">
+                                <svg class="composition-btn__sprite">
+                                    <use xlink:href="./icons/sprite.svg#chobar"></use>
+                                </svg>
+                                <span class="composition-btn__text">состав</span>
+                            </div>
                             <ul class="descript-composition">
                                 <li class="descript-composition__item">
                                     <svg class="descript-composition__sprite">
@@ -281,7 +288,12 @@
                         </div>
                         <div class="descript-menu__content">
                             <div class="descript-menu__hover">
-                                <button class="composition-btn">состав</button>
+                                <div class="composition-btn">
+                                    <svg class="composition-btn__sprite">
+                                        <use xlink:href="./icons/sprite.svg#chobar"></use>
+                                    </svg>
+                                    <span class="composition-btn__text">состав</span>
+                                </div>
                                 <ul class="descript-composition">
                                     <li class="descript-composition__item">
                                         <svg class="descript-composition__sprite">
@@ -368,7 +380,9 @@
                 </ul> 
             </div>
             <button class="descript-menu__scroll descript-menu__scroll-right">
-                <img src="./icons/png/arrow-scroll-right.png" alt="">
+                <svg class="arrow-scroll">
+                    <use xlink:href="./icons/sprite.svg#arrow"></use>
+                </svg>
             </button>
         </section>
         <section id="team" class="section team">

@@ -29,12 +29,14 @@
     justify-content: center;
 
     @include tablets {
+        position: relative;
         flex-direction: column;
         width: 100%;
         height: auto;
     }
     @include phones {
         min-width: 100vw;
+        min-height: 100vh;
     }
 }
 .descript-menu__scroll {
@@ -50,6 +52,7 @@
 }
 .descript-menu__scroll-left {
     padding-left: 5%;
+    transform: rotate(90deg);
     @include tablets {
         padding-left: 0;
         left: 20.573%;
@@ -61,6 +64,7 @@
 }
 .descript-menu__scroll-right {
     padding-right: 5%;
+    transform: rotate(270deg);
     @include tablets {
         padding-right: 0;
         right: 20.573%;
@@ -72,8 +76,10 @@
 
 }
 .arrow-scroll {
-    width: rem(13px);
-    height: rem(28px);
+    fill: #0d0d0d;
+    height: 100%;
+    width: rem(30px);
+   
 }
 
 
@@ -136,9 +142,13 @@
     height: 18.907%;
     @include tablets {
         position: absolute;
-        top: 3%;
-        right: 3.4%;
+        top: -21%;
+        right: 0%;
         height: 46.87%;
+    }
+    @include phones {
+        top: 1%;
+        right: 3%;
     }
 }
 .descript-composition__item {
@@ -146,33 +156,30 @@
     height: 10.6383%;
 }
 .composition-btn {
-    padding: 70.2% 24.445% 12.223% 21.112%;
-    border: none;
     border-radius: 5px;
     background: #00accf;
-    @include black-i;
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: rem(10px);
+    width: rem(90px);
+    height: rem(90px);
+
+    @include phones {
+        width: 18.75vw;
+        height: 11.25vh;
+    }
+    
+}
+.composition-btn__sprite {
+    width: 56.7%;
+    height: 56.7%;
+    fill: #fff;
+}
+.composition-btn__text {
     text-transform: uppercase;
     font-size: rem(14px);
+    @include black-i;
     color: #fff;
-    position: relative;
-    @include tablets {
-        position: static;
-    }
-    &::after{
-        content: '';
-        position: absolute;
-        width: 56.7%;
-        height: 56.7%;
-        background-image: url(./icons/chocolate-bar.svg);
-        background-repeat: no-repeat;
-        background-position: center center;
-        top: 7%;
-        left: 23%;
-        @include tablets {
-            top: -21%;
-        }
-        
-    }
 }
 .descript-composition__sprite {
     display: inline-block;
@@ -198,6 +205,11 @@
         width: rem(270px);
         height: 100%;
         right: 100%;
+        z-index: 12;
+    }
+    @include phones {
+        max-width: rem(270px);
+        width: 65vw;
     }
 }
 .descript-menu__hover:hover .descript-composition {
