@@ -87,3 +87,154 @@ for(let i = 0; i<teamLength; i++){
             }
     })
 }
+
+                /* СЛАЙДЕР ОПИСАНИЕ */
+
+const left = document.querySelector('.descript-menu__scroll-left');
+const right = document.querySelector('.descript-menu__scroll-right');
+const descSlider = document.querySelector('.descript-slider');
+
+right.addEventListener('click', function(){
+    swipe('right');
+})
+left.addEventListener('click', function(){
+    swipe('left');
+})
+function swipe(direct){
+    if(direct=='right'){
+        descSlider.appendChild(descSlider.firstElementChild);
+    } else {
+        descSlider.insertBefore(descSlider.lastChild, descSlider.firstElementChild);
+        
+    }
+}
+
+                        /* ОТЗЫВЫ */
+
+const revList = document.querySelectorAll('.reviews-list__item');
+const revComm = document.querySelectorAll('.reviews-commentators__item');
+const revCommLength = revComm.length;
+
+for(let m = 0; m<revCommLength; m++){
+    revComm[m].addEventListener( 'click', function(e){
+        for(let m = 0; m<revCommLength; m++) {
+            revComm[m].classList.remove('reviews-commentators_active');
+            revList[m].classList.remove('reviews-list_active');
+        }
+        revComm[m].classList.add('reviews-commentators_active');
+        revList[m].classList.add('reviews-list_active');
+    })
+}
+
+                /* ОБРАБОТКА ВВОДА */
+
+const phoneInput = document.querySelector('#phones');
+
+phoneInput.addEventListener('keydown', function (event){
+    let isDigit = false;
+
+    if(event.key >= 0 || event.key <= 9 || event.key == '+' || event.key == '-' || event.key == 'ArrowLeft' || event.key == 'ArrowRight' || event.key == 'Backspace'){
+        isDigit = true;
+    }
+    if(!isDigit) {
+      event.preventDefault();
+    }
+})
+                    /* МОДАЛКА  */
+
+
+const openButton = document.querySelector("#form__btn");
+const successOverlayYes = createOverlay("Сообщение отправлено");
+const successOverlayNo = createOverlay("Сообщение не отправлено");
+
+function yes(e) {
+  document.body.appendChild(successOverlayYes);
+  document.body.style.overflow='hidden';
+  myform.elements.btnReset.click();
+}
+function no(e) {
+    document.body.appendChild(successOverlayNo);
+    document.body.style.overflow='hidden';
+  }
+
+function createOverlay(content) {
+  const overlayElement = document.createElement("div");
+  overlayElement.classList.add("overlay");
+
+  const template = document.querySelector("#overlayTemplate");
+  overlayElement.innerHTML = template.innerHTML;
+
+  const closeElement = overlayElement.querySelector(".close");
+  closeElement.addEventListener("click", function(eve) {
+    eve.preventDefault();
+    document.body.style.overflow='visible';
+    document.body.removeChild(overlayElement);
+  });
+
+  const contentElement = overlayElement.querySelector(".content");
+  contentElement.innerHTML = content;
+
+  return overlayElement;
+}
+
+                /* ФОРМА ОТПРАВКИ */
+
+const myform = document.querySelector('#form-id');
+
+openButton.addEventListener('click', function(e){
+    e.preventDefault();
+    if(validateForm(myform)) {
+        
+        const fd = new FormData(myform);
+        fd.set('name', myform.elements.name.value);
+        fd.set('phone', myform.elements.phone.value);
+        fd.set('comment', myform.elements.comment.value);
+        fd.append('to', 'test@gmail.com');
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.responseType = 'json';
+        xhr.open('POST','https://webdev-api.loftschool.com/sendmail', true);
+        xhr.send(fd);
+        xhr.addEventListener('load',()=>{
+            if(xhr.response.status === 1) {
+                yes(e);
+                setTimeout(() => {
+                    document.querySelector('.close').click();
+                }, 2000);      
+            } else {
+                no(e);
+                setTimeout(() => {
+                    document.querySelector('.close').click();
+                }, 2000);  
+            } 
+        })
+    }
+})
+function validateForm(form) {
+    let valid = true;
+
+    if(!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.street)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.house)) {
+        valid = false;
+    }
+    if(!validateField(form.elements.comment)) {
+        valid = false;
+    }
+    return valid;
+}
+function validateField(field) {
+    field.nextElementSibling.textContent = field.validationMessage;
+    return field.checkValidity();
+}
+
+
+    
