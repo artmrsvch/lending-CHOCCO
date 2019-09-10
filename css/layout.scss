@@ -9,6 +9,11 @@ body {
 //Selectors
 .wrapper {
     overflow: hidden;
+    
+}
+.main-slide {
+    width: 100%;
+    height: 100%;
 }
 .section {
     @include section;
@@ -16,7 +21,7 @@ body {
         height: 100%;
     }
     @include phones {
-        height: 100%;
+        height: 100vh;
     }
 }
 
