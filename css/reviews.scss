@@ -1,6 +1,6 @@
 .reviews {
     @include section;
-    padding-bottom: rem(61px);
+    //padding-bottom: rem(61px);
 
     &::before {
         content: '';
@@ -87,22 +87,23 @@
 
     @include phones {
         width: 100%;
-        height: 81.8%;
+        height: 60.75vh;
         margin-bottom: 5.77%;
+        padding-top: rem(30px);
     }
 
     &::before{
         content: '';
         position: absolute;
-        left: 45%;
+        left: 50%;
+        transform: translateX(-50%);
         top: 0;
         height: rem(25px);
         width: rem(90px);
         background: url(./icons/png/label_reviews.png) center center no-repeat;
 
         @include tablets {
-            left: 40%;
-            right: 40%;
+            
         }
         @include phones {
             z-index: 1;
@@ -155,7 +156,7 @@
     } 
 
     @include phones {
-        margin-bottom: rem(27px);
+        margin-bottom: 3.375vh;
     }
 }
 .avatar-pic {
@@ -188,7 +189,9 @@
     margin-bottom: rem(27px);
 
     @include phones {
-        font-size: 2.6vh;
+        font-size: 2.5vh;
+        margin-top: 3.125vh;
+        margin-bottom: 3.375vh;
     }
 }
 .reviews-list__author {
