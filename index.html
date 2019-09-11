@@ -36,7 +36,7 @@
     </div>
     <div class="wrapper">
         <div class="main-slide">
-            <section id="intro" class="section intro">
+            <section 0 id="intro" class="section intro active-sct">
                 <div class="container intro__container"> 
                     <header class="header">
                         <div class="header__logo">cho<br>cco</div>
@@ -693,36 +693,33 @@
                     </footer>
             </section>
         </div>
-    </div>
-    <ul class="fixed-menu">
+        <ul class="fixed-menu">
             <li class="fixed-menu__item fixed-menu__item_active">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="0" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="1" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="2" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="3" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="4" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="5" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="6" type="button" class="fixed_btn"></button>
             </li>
             <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
+                <button data-scroll-to="7" type="button" class="fixed_btn"></button>
             </li>
-            <li class="fixed-menu__item">
-                <button type="button" class="fixed_btn"></button>
-            </li>
-    </ul>
+        </ul>
+    </div>
     <script type="template" id="overlayTemplate">
         <div class="overlay__container">
             <div class="content"></div>
@@ -730,6 +727,8 @@
         </div>
     </script>
     <script src="jquery-3.4.1.min.js"></script>
+    <script src="jquery.touchwipe.min.js"></script>
+    <script src="jquery.mousewheel.min.js"></script>
     <script src="onePageScroll.js"></script>
     <script src="main.js"></script>
 </body>

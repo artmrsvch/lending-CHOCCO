@@ -33,14 +33,14 @@ z-index: 998;
         background: #ffffff;
 
     }
-    &:focus {
+    /*&:focus {
         border: 1px solid #ffffff;
-    }
+    }*/
 }
-/*.fixed-menu__item {
+.fixed-menu__item {
     &_active {
         .fixed_btn {
             border-color: #ffffff;
         }
     }
-}*/
+}
