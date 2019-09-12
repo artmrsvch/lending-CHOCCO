@@ -116,7 +116,7 @@ $(function(){
             else{/*СВАЙП ВПРАВО*/}
         }
     else {
-        if (nowPoint.pageY < startPoint.y || !$('body').css('overflow','hidden'))
+        if (nowPoint.pageY < startPoint.y && !gambMenu.classList.contains('gamb__activ'))
         {scrollToSection('next');}
         else{scrollToSection('prev');}
     }
