@@ -111,49 +111,20 @@ $(function(){
     var xAbs = Math.abs(startPoint.x - nowPoint.pageX);
     var yAbs = Math.abs(startPoint.y - nowPoint.pageY);
     if ((xAbs > 20 || yAbs > 20) && (pdelay.getTime()-ldelay.getTime())<200) {
-    if (xAbs > yAbs) {
-    if (nowPoint.pageX < startPoint.x){/*СВАЙП ВЛЕВО*/}
-    else{/*СВАЙП ВПРАВО*/}
-    }
+        if (xAbs > yAbs) {
+            if (nowPoint.pageX < startPoint.x){/*СВАЙП ВЛЕВО*/}
+            else{/*СВАЙП ВПРАВО*/}
+        }
     else {
-    if (nowPoint.pageY < startPoint.y){scrollToSection('next');}
-    else{scrollToSection('prev');}
+        if(('body').css({'overflow': 'hidden'})){
+
+        } else {
+            if (nowPoint.pageY < startPoint.y){scrollToSection('next');}
+            else{scrollToSection('prev');}
+        }
+        
     }
     }
     }, false);
 
-
-
-
-
-
-   /* 
-    var initialPoint;
-    var finalPoint;
-    document.addEventListener('touchstart', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    initialPoint=event.changedTouches[0];
-    }, false);
-    document.addEventListener('touchend', function(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    finalPoint=event.changedTouches[0];
-    var xAbs = Math.abs(initialPoint.pageX - finalPoint.pageX);
-    var yAbs = Math.abs(initialPoint.pageY - finalPoint.pageY);
-    if (xAbs > 20 || yAbs > 20) {
-    if (xAbs > yAbs) {
-    if (finalPoint.pageX < initialPoint.pageX){
-    }
-    else{
-   }
-    }
-    else {
-    if (finalPoint.pageY < initialPoint.pageY){
-        scrollToSection('prev');}
-    else{
-        scrollToSection('next');}
-    }
-    }
-    }, false);*/
 })
