@@ -116,13 +116,9 @@ $(function(){
             else{/*СВАЙП ВПРАВО*/}
         }
     else {
-        if(('body').css({'overflow': 'hidden'})){
-
-        } else {
-            if (nowPoint.pageY < startPoint.y){scrollToSection('next');}
-            else{scrollToSection('prev');}
-        }
-        
+        if (nowPoint.pageY < startPoint.y || !$('body').css('overflow','hidden'))
+        {scrollToSection('next');}
+        else{scrollToSection('prev');}
     }
     }
     }, false);
