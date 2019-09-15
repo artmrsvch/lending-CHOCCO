@@ -34,7 +34,7 @@ $(function(){
         setTimeout(() => {
             inScroll = false;
             switchDot(sectionEq);
-        }, 100 + 100);
+        }, 1000 + 300);
     };
     
     const scrollToSection = direction => {
@@ -65,11 +65,14 @@ $(function(){
     })
     
     $(document).on('keydown', e => {
-    
-        switch(e.keyCode) {
+        const tagName = e.target.tagName.toLowerCase();
+        const userTypingInInputs = tagName === 'input' || tagName === 'textarea';
+        if (userTypingInInputs === false){
+            switch(e.keyCode) {
             case 40: scrollToSection('next'); break;
             case 38: scrollToSection('prev'); break;
     
+        }
         }
     })
     
