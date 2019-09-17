@@ -1,0 +1,27 @@
+.work-container {
+    @include fcc;
+}
+
+.work__title {
+@include title;
+}
+.player__controls {
+    height: 35px;
+    width: 660px;
+    background: #3e3e3e;
+    padding-left: 20px;
+    box-sizing: border-box;
+    padding-top: 6px;
+}
+.controls-play {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 0;
+	height: 0;
+	border-left: 11px solid transparent;
+	    border-right: 11px solid transparent;
+        border-top: 22px solid #626262; 
+    transform: rotate(270deg);
+    border-radius: 20%;
+}
