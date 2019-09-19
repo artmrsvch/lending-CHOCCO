@@ -5,23 +5,113 @@
 .work__title {
 @include title;
 }
+.player {
+    @include fcc;
+}
+.player__wrapper {
+    height: 405px;
+    width: 660px;
+    position: relative;
+}
+.player__splash {
+    background: url('./icons/png/Play_white.png');
+    height: 118px;
+    width: 82px;
+    opacity: 0.9;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
 .player__controls {
     height: 35px;
     width: 660px;
+    margin-top: -4px;
     background: #3e3e3e;
-    padding-left: 20px;
+    padding: 0 20px;
     box-sizing: border-box;
-    padding-top: 6px;
-}
-.controls-play {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: space-between;
+}
+.controls-play {
     width: 0;
 	height: 0;
 	border-left: 11px solid transparent;
-	    border-right: 11px solid transparent;
-        border-top: 22px solid #626262; 
+	border-right: 11px solid transparent;
+    border-top: 22px solid #626262; 
     transform: rotate(270deg);
     border-radius: 20%;
+    border-bottom: 0;
+    padding: 0;
+}
+.player__controls .controls-play_paused {
+    width: 18px;
+    height: 18px;
+    border: 0;
+    border-radius: 0;
+    border-top: 6px solid #626262;  
+    border-bottom: 6px solid #626262;  
+}
+.controls-runner {
+    background: #626262;
+    width: 445px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+
+}
+.controls-runner__btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #626262;
+    border: none;
+    padding: 0;
+}
+.controls-mute {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #626262;
+    border: 0;
+    &::before {
+        content: '';
+        display: block;
+        margin-top: -7px;
+        margin-left: -5px;
+        border-left: 11px solid transparent;
+	    border-right: 11px solid transparent;
+        border-top: 22px solid #626262;
+        transform: rotate(90deg);
+    }
+}
+.player__controls .controls-mute_novolume {
+    &::after {
+        content: '';
+        display: block;
+        background: #3e3e3e;
+        width: 32px;
+        height: 6px;
+        transform: rotate(-45deg);
+        border-radius: 20px;
+        margin-left: -8px;
+        margin-top: -12px;
+    }
+}
+.controls-volume {
+    background: #626262;
+    width: 60px;
+    height: 6px;
+    display: flex;
+    align-items: center;
+}
+.controls-volume__btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #626262;
+    border: none;
+    padding: 0;
 }
