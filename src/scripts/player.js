@@ -15,7 +15,7 @@ const onPlayerReady = () => {
   let interval;
   let durationSec = player.getDuration();
 
-  $(".player__duration-estimate").text(formatTime(durationSec));
+  $(".controls-duration__estimate").text(formatTime(durationSec));
 
   if (typeof interval !== "undefined") {
     clearInterval(interval);
@@ -25,11 +25,11 @@ const onPlayerReady = () => {
     const completedSec = player.getCurrentTime();
     const completedPercent = (completedSec / durationSec) * 100;
 
-    $(".player__playback-button").css({
+    $(".controls-runner__btn").css({
       left: `${completedPercent}%`
     });
 
-    $(".player__duration-completed").text(formatTime(completedSec));
+    $(".controls-duration__complited").text(formatTime(completedSec));
   }, 1000);
 };
 
@@ -45,7 +45,7 @@ const eventsInit = () => {
     }
   });
 
-  $(".controls-runner__btn").on("click", e => {
+  $(".controls-runner").on("click", e => {
     const bar = $(e.currentTarget);
     const newButtonPosition = e.pageX - bar.offset().left;
     const buttonPosPercent = (newButtonPosition / bar.width()) * 100;
@@ -63,6 +63,47 @@ const eventsInit = () => {
   });
 };
 
+
+let volPosPercent;
+$(".controls-volume").on("click", e => {
+  const vol = $(e.currentTarget);
+  const newVolumePosition = e.pageX - vol.offset().left;
+  volPosPercent = (newVolumePosition / vol.width()) * 100;
+
+  $(".controls-volume__btn").css({
+    left: `${volPosPercent}%`
+  });
+
+  player.setVolume(volPosPercent);
+  if(volPosPercent <= 0){
+    $('.controls-mute').addClass('controls-mute_novolume');
+  } else {
+    $('.controls-mute').removeClass('controls-mute_novolume');
+    player.unMute()
+  }
+
+});
+$('.controls-mute').on('click', function muteControl(eb) {
+  eb.preventDefault();
+  const btnMute = $(eb.currentTarget);
+  if(!btnMute.hasClass('controls-mute_novolume')){
+    $('.controls-mute').addClass('controls-mute_novolume');
+    player.mute();
+    $(".controls-volume__btn").css({
+      left: `0`
+    });
+  } else {
+    if(volPosPercent > 0){
+      player.unMute()
+      $(".controls-volume__btn").css({
+        left: `${volPosPercent}%`
+      });
+      $('.controls-mute').removeClass('controls-mute_novolume');
+    } 
+  }
+});
+
+
 const onPlayerStateChange = event => {
   const playerButton = $(".controls-play");
   /*
@@ -75,10 +116,12 @@ const onPlayerStateChange = event => {
    */
   switch (event.data) {
     case 1: 
-      $('.player__wrapper').addClass('controls-play');
+      $('.player__wrapper').addClass('player__wrapper_active');
+      $('.player__screen').addClass('player__screen_disable');
       playerButton.addClass("controls-play_paused");
       break;
     case 2: 
+      $('.player__wrapper').removeClass('player__wrapper_active');
       playerButton.removeClass("controls-play_paused");
       break;
   }
