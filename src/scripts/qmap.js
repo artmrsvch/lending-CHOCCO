@@ -4,4 +4,5 @@ function init(){
         center: [55.7482921,37.5900027],
         zoom: 15
     })
+    yandexMaps.behaviors.disable('scrollZoom');
 }

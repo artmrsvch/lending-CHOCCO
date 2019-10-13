@@ -9,7 +9,7 @@
         height: rem(321px);
         left: 0;
         bottom: rem(-160px);
-        background: url(./icons/png/list_revi.png) center center no-repeat;
+        background: url(./icons/png/list_revi.png) center center / contain no-repeat;
 
         @include tablets {
             width: rem(76px);
@@ -23,7 +23,7 @@
         height: rem(193px);
         left: 0;
         bottom: rem(-85px);
-        background: url(./icons/png/berrys_revi.png) center center no-repeat;
+        background: url(./icons/png/berrys_revi.png) center center / contain no-repeat;
         @include tablets {
             width: rem(96px);
             height: rem(176px);

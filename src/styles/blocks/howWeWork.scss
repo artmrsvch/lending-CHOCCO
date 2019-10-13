@@ -7,11 +7,19 @@
 }
 .player {
     @include fcc;
+    @include tablets {
+        width: 92.4%;
+        height: 42.53%;
+    }
 }
 .player__wrapper {
     height: 405px;
     width: 660px;
     position: relative;
+    @include tablets {
+        height: 93%;
+        width: 100%;
+    }
 }
 .player__screen {
     position: absolute;
@@ -50,6 +58,13 @@
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    @include tablets {
+        width: 100%;
+        padding: 0 10px;
+    }
+    @include phones {
+        margin-top: 0;
+    }
 }
 .controls-play {
     width: 0;
@@ -61,6 +76,11 @@
     border-radius: 20%;
     border-bottom: 0;
     padding: 0;
+    @include phones {
+        border-left: 7px solid transparent;
+        border-right: 7px solid transparent;
+        border-top: 15px solid #626262; 
+    }
 }
 .player__controls .controls-play_paused {
     width: 18px;
@@ -75,6 +95,14 @@
     width: 380px;
     height: 6px;
     position: relative;
+    @include tablets {
+        width: 57.58%;
+        margin-left: 5px;
+    }
+    @include phones {
+        width: 50%;
+        height: 4px;
+    }
 
 }
 .controls-runner__btn {
@@ -88,11 +116,22 @@
     top: 50%;
     left: 0%;
     transform: translate(-50%, -50%);
+    @include phones {
+        width: 8px;
+        height: 8px;
+    }
 }
 .controls-duration {
     @include black-reg;
     color: #626262;
     font-size: 21px;
+    @include tablets {
+        font-size: 19px;
+        margin-right: 5px;
+    }
+    @include phones {
+        font-size: 15px;
+    }
 }
 .controls-mute {
     width: 10px;
@@ -111,6 +150,17 @@
 	    border-right: 11px solid transparent;
         border-top: 22px solid #626262;
         transform: rotate(90deg);
+    }
+    @include phones {
+        width: 7px;
+        height: 7px;
+        &::before {
+            content: '';
+            margin-top: -5px;
+            border-left: 7px solid transparent;
+            border-right: 7px solid transparent;
+            border-top: 15px solid #626262;
+        }
     }
 }
 .player__controls .controls-mute_novolume {
@@ -131,6 +181,12 @@
     width: 60px;
     height: 6px;
     position: relative;
+    @include tablets {
+        width: 9.1%;
+    }
+    @include phones {
+        height: 4px;
+    }
 }
 .controls-volume__btn {
     width: 12px;
@@ -143,4 +199,8 @@
     top: 50%;
     left: 100%;
     transform: translate(-50%, -50%);
+    @include phones {
+        width: 8px;
+        height: 8px;
+    }
 }
